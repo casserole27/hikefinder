@@ -50,7 +50,48 @@
 
         </nav>
     
-    </header>    
+    </header> 
+
+    <!-- Login and Sign Up Form -->
+    <!--https://www.w3schools.com/howto/howto_css_login_form.asp-->
+
+    <div class="login-modal hidden" id="login-modal">
+
+        <button 
+            class="close-modal-btn fa-solid fa-circle-xmark hidden" 
+            id="close-modal-btn"
+            aria-label="close modal">
+        </button>
+
+        <form action="#">
+            
+            <div class="input-container">
+
+                <label for="username">Username</label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <button type="submit">Login</button>
+                <button type="submit">Sign Up</button>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember be
+                </label>
+
+            </div> <!--close input container-->
+
+            <div class="xcl-container">
+                <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
+                <span class="forgot-pwd">Forgot <a href="#">password?</a></span>
+            </div>
+
+        </form><!--close xcl container-->
+
+    </div> <!--close modal div-->
+
+    <!--end form-->
 
     <main class="main-container">
         

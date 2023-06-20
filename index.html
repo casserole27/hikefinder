@@ -10,14 +10,13 @@
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">    
     
     <!-- FONT AWESOME CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    
     <!--CSS STYLESHEET-->
     <link rel="stylesheet" href="index.css">
 </head>
@@ -30,23 +29,29 @@
 
  <body>
 
+    <div class="body-container">
+
     <header>
         
-        <img src="assets/logo.svg" alt="HikeFinder Logo">
+        <div class="header-container">
+
+        <img src="assets/logo.svg" class="header-logo" alt="HikeFinder Logo">
         <button 
-            class="fa-solid fa-bars nav-btn" 
+            class="fa-solid fa-bars fa-lg nav-btn" 
             id="nav-btn"
             aria-label="navigation menu">
         </button>
+
+        </div>
         
-        <nav class="header-nav">
+        <nav class="header-nav hidden">
             
-            <ol>
-                <li class="crumb"><a href="index.html">home</a></li>
-                <li class="crumb"><a href="explore.html">explore</a></li>
-                <li class="crumb"><a href="#" class="sign-up-link" id="sign-up-link">sign up</a></li>
-                <li class="crumb"><a href="#" class="log-in-link" id="log-in-link">log in</a></li>
-            </ol>
+            <ul>
+                <li class="header-crumb"><a href="index.html">home</a></li>
+                <li class="header-crumb"><a href="explore.html">explore</a></li>
+                <li class="header-crumb"><button class="sign-up-btn" id="sign-up-btn">sign up</button></li>
+                <li class="header-crumb"><button class="log-in-btn" id="log-in-btn">log in</button></li>
+            </ul>
 
         </nav>
     
@@ -97,8 +102,10 @@
         
         <section class="hero-container">
 
+            <div class="hero-text">
+
             <h1 class="hero-title">Find Your Next 
-                <span>Adventure</span>
+                <span class="hero-adventure">Adventure</span>
             </h1>
 
             <p class="hero-description">
@@ -106,34 +113,39 @@
                 Get on the trail with deatiled maps and updates
                 shared by hikers like you.
             </p>
-
-            <form action="#">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input 
-                    type="search" 
-                    id="city-search" 
-                    name="city-search"
-                    aria-label="search by city"
-                    placeholder="Search by city"
-                    >
-                <button 
-                    type="submit"
-                    class="city-search-btn"
-                    id="city-search-btn">
-                    Search
-                </button>    
-
+            
+             <form action="#">
+                <div class="search-form-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input 
+                        type="search" 
+                        id="city-search" 
+                        name="city-search"
+                        aria-label="search by city"
+                        placeholder="Search by city"
+                        class="search-input"
+                        >
+                    <button 
+                        type="submit"
+                        class="city-search-btn"
+                        id="city-search-btn">
+                        Search
+                    </button>    
+                </div>
             </form>
+
+        </div><!--close hero text container-->
         
         </section> 
+
         
         <section class="hikes-container">
-            <h2>Hikes near Bergen</h2>
+            <h2 class="hikes-heading">Hikes near Bergen</h2>
        
             <article>
 
-                <img src="assets/image 4.jpg" alt="forested mountains and clear lakes under blue sky and clouds">
-                <h3 class="hikes-title">Floyen</h3>
+                <img src="assets/image 4.jpg" class="hike-img" alt="forested mountains and clear lakes under blue sky and clouds">
+                <h3 class="hikes-title">Fløyen</h3>
                 <h4 class="hikes-subtitle">Length: 10.2 km - Est. 5 h</h4>
                 <p class="hikes-description">
                     Fløibanen is one of Norway's most visited attractions. At the top of Fløyen you will find a large and varied hiking area, spectacular views of the city.
@@ -146,7 +158,7 @@
 
             <article>
 
-                <img src="assets/image 5.jpg" alt="mountains, forest, and lakes surrounding the city of Bergen, Norway">
+                <img src="assets/image 5.jpg" class="hike-img" alt="mountains, forest, and lakes surrounding the city of Bergen, Norway">
                 <h3 class="hikes-title">Ulriken</h3>
                 <h4 class="hikes-subtitle">Length: 3.5 km - Est. 2 h 30 m</h4>
                 <p class="hikes-description">
@@ -160,7 +172,7 @@
 
             <article>
 
-                <img src="assets/image 6.jpg" alt="green craggy rocks and mountains near a city and a lake">
+                <img src="assets/image 6.jpg" class="hike-img" alt="green craggy rocks and mountains near a city and a lake">
                 <h3 class="hikes-title">Landåsfjellet</h3>
                 <h4 class="hikes-subtitle">Length: 3.5 km - Est. 2 h 30 m</h4>
                 <p class="hikes-description">
@@ -177,7 +189,7 @@
         <section class="site-info-container">
 
             <article class="info-item">
-                <i class="fa-solid fa-bell info-icon" alt=""></i>
+                <i class="fa-solid fa-bell fa-xl info-icon" alt=""></i>
                 <h3 class="info-title">Sign up for notifications</h3>
                 <p class="info-description">
                     <a href="#" class="info-link">Sign up</a> to get conditions, alerts, information on pop-up events and interesting stories.
@@ -185,7 +197,7 @@
             </article>
 
             <article class="info-item">
-                <i class="fa-solid fa-location-dot info-icon"></i>
+                <i class="fa-solid fa-location-dot fa-xl info-icon"></i>
                 <h3 class="info-title">Get the HikeFinder App</h3>
                 <p class="info-description">
                     <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
@@ -193,7 +205,7 @@
             </article>
 
             <article class="info-item">
-                <i class="fa-solid fa-share info-icon"></i>
+                <i class="fa-solid fa-share fa-xl info-icon"></i>
                 <h3 class="info-title">Share Trails</h3>
                 <p class="info-description">
                     <a href="#" class="info-link">Share your hiking adventures</a> with the community and keep a record of your travels.
@@ -206,14 +218,14 @@
 
     <footer>
         
-        <nav class="footer-nav">
+        <nav>
             
-            <ol>
+            <ul class="footer-nav">
                 <li class="footer-crumb"><a href="index.html">home</a></li>
                 <li class="footer-crumb"><a href="explore.html">explore</a></li>
-                <li class="footer-crumb"><a href="#" class="sign-up-link" id="sign-up-link">sign up</a></li>
-                <li class="footer-crumb"><a href="#" class="log-in-link" id="log-in-link">log in</a></li>
-            </ol>
+                <li class="footer-crumb"><button class="footer-sign-up-btn" id="footer-sign-up-btn">sign up</button></li>
+                <li class="footer-crumb"><button class="footer-log-in-btn" id="footer-log-in-btn">log in</button></li>
+            </ul>
 
         </nav>
 
@@ -222,7 +234,9 @@
 
     </footer>
 
-<script src="index.js"></script>
+    </div>
+
+    <script src="index.js"></script>
 
 </body>
 </html>

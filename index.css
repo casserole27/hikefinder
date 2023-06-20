@@ -10,18 +10,25 @@ Date: April 2023
 :root {
     
     /*COLORS*/
-  
-    
+    --white: #fff;
+    --off-white: #FAFAFA;
+    --black: #000;
+    --dark-gray: #4E4E4E;
+    --gray: #565656;
+    --light-gray: lightgray;
+    --green: #638A5C;
+    --pale-yellow: #ECE480;
+ 
     /*BORDER RADIUS*/
-    --br-soft: 1rem;
+    --br-soft: .25rem;
     --br-round: 50%;
     
     /*FONT SIZES*/
-    --fs-xs: 1rem;
-    --fs-s: 1.25rem;
-    --fs-m: 1.5rem;
-    --fs-l: 2.25rem;
-    --fs-title: 2.5rem;
+    --fs-xs: .75rem;
+    --fs-s: 1rem; /*16px*/
+    --fs-m: 1.375rem; /*22px*/
+    --fs-l: 2.75rem; /*44px*/
+    --fs-title: 2.125rem; /*34px*/
 }
 
 /****** MARGIN AND PADDING RESET ******/
@@ -33,3 +40,372 @@ Date: April 2023
 }
 
 /******* GLOBAL STYLES *******/
+
+body {
+    background-color: var(--off-white);
+    font-family: 'Inter', sans-serif;
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+   
+}
+
+.body-container {
+    background-color: var(--white);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+button,
+a,
+input {
+    transition: 0.5s ease;
+}
+
+/*====== HEADER NAV MENU STYLING ======*/
+
+header {
+    padding: 0 .75em;
+}
+
+.header-container {
+    padding: 1em 0;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-crumb {
+    font-size: var(--fs-s);
+    text-transform: uppercase;
+    padding: .25em 0;
+    margin-bottom: .5em;
+}
+
+.sign-up-btn,
+.log-in-btn {
+    display: block;
+    width: 100px;
+    font-family: inherit;;
+    font-size: var(--fs-s);
+    text-align: center;
+    text-transform: uppercase;
+    padding: .5em;
+    border-radius: var(--br-soft);
+}
+
+.sign-up-btn {
+    background-color: var(--green);
+    color: var(--white);
+    border: 2px solid var(--green);
+}
+
+.log-in-btn {
+    border: 2px solid var(--dark-gray);
+}
+
+
+/*====== IMG STYLING ======*/
+
+.hike-img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    margin: 0 auto 1.40em auto;
+}
+
+.header-logo {
+    max-width: 140px;
+}
+
+.nav-btn {
+    background-color: var(--white);
+}
+
+/*====== HERO SECTION ======*/
+
+.hero-container {
+    max-height: 600px; /*!possible grid sizing*/
+    min-height: 300px;
+    background: center no-repeat url(assets/image\ 2\(1\).jpg);
+    margin-bottom: 1.75em;
+}
+
+.hero-text {
+    max-height: 500px; /*!possible grid sizing*/
+    min-height: 300px;
+    max-width: 500px;
+    min-width: 300px;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 2em 1em 0 1em;
+    
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "desc"
+        "form";
+    grid-template-rows: 1fr 1fr .75fr;
+    grid-template-columns: 1fr;
+}
+
+.hero-title {
+    color: var(--white);
+    font-size: var(--fs-title);
+    font-weight: 400;
+
+    grid-area: title;
+}
+
+.hero-adventure {
+    color: var(--pale-yellow);
+    font-weight: 700;
+}
+
+.hero-description {
+    width: 75%;
+    font-size: var(--fs-xs);
+    color: var(--white);
+
+    grid-area: desc;
+}
+
+.search-form-container {
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: var(--br-soft);
+
+    display: flex;
+    align-items: center;
+
+    grid-area: form;
+}
+
+.search-input {
+    border: none;
+    width: 80%;
+    padding: .5em;
+}
+
+.search-input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--gray);
+    opacity: .30;
+}
+
+.search-icon {
+    padding: 0 .5em;
+}
+
+.city-search-btn {
+    font-family: inherit;
+    font-size: var(--fs-xs);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: .1rem;;
+    background-color: var(--green);
+    padding: .5em 1.25em;
+    border: 2px solid var(--white);
+    border-radius: var(--br-soft);
+}
+
+
+/* ====== HIKES SECTION ====== */
+
+.hikes-container {
+    padding: 0 .75em 1em .75em;
+}
+
+.hikes-heading {
+    color: var(--dark-gray);
+    margin-bottom: .5em;
+}
+
+.hikes-heading,
+.hikes-title {
+    font-size: var(--fs-m);
+    margin-bottom: .25em;
+}
+
+.hikes-subtitle,
+.hikes-description {
+    font-size: var(--fs-xs);
+}
+
+.hikes-subtitle {
+    margin-bottom: 1em;
+}
+
+.hikes-description {
+    color: var(--gray);
+    margin-bottom: 1.25em;
+}
+
+.learn-link {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    background-color: var(--green);
+    color: var(--white);
+    padding: .5em .5em;
+    margin-bottom: 2em;
+    border-radius: var(--br-soft);
+    transition: 0.5s;
+}
+
+
+
+/*====== SITE INFO ======*/
+
+.site-info-container {
+    background-color: #FAFAFA;
+    padding: 2.25em 3em;
+}
+
+.info-item {
+    text-align: center;
+    margin-bottom: 1.75em;
+}
+
+.info-icon {
+    display: inline-block;
+    color: var(--dark-gray);
+    margin-bottom: 1em;
+}
+
+.info-title {
+    margin-bottom: 1em;
+}
+
+.info-title,
+.info-description {
+    font-size: var(--fs-xs);
+}
+
+.info-link {
+    color: var(--green);
+    font-weight: 700;
+}
+
+
+/*====== FOOTER ======*/
+
+footer {
+    background-color: var(--black);
+}
+
+.footer-nav {
+    padding: 2em;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-crumb a {
+    color: var(--white);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+}
+
+.footer-sign-up-btn,
+.footer-log-in-btn {
+    font-family: inherit;
+    text-transform: uppercase;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.logo-white {
+    display: block;
+    max-width: 110px;
+    margin: 0 auto .25em auto;
+}
+
+.copyright-info {
+    font-size: .5em;
+    text-align: center;
+    color: var(--light-gray);
+    padding-bottom: 2em;
+}
+
+
+/*======== HOVER AND FOCUS STATES ======*/
+
+
+a:hover {
+    color: hotpink;
+    margin-right: .5em;
+    transform: scale(1.2);
+}
+
+input:focus,
+a:focus {
+    padding: .5em;
+    border-radius: var(--br-soft);
+}
+
+button:hover {    
+    color: var(--dark-gray);
+    background-color: var(--pale-yellow);
+    border-radius: .75rem;
+}
+
+input:focus,
+a:focus,
+button:focus {
+    outline: 5px solid var(--pale-yellow);
+}
+
+input:focus,
+a:focus,
+button:hover,
+button:focus {
+    transform: scale(1.1);
+}
+
+.footer-sign-up-btn:hover,
+.footer-log-in-btn:hover {
+    padding: .5em;
+}
+
+.footer-sign-up-btn:focus,
+.footer-log-in-btn:focus {
+    padding: .5em;
+    border-radius: var(--br-soft);
+}
+
+.learn-link:hover {
+    color: var(--dark-gray);
+    background-color: var(--pale-yellow);
+    border-radius: .75rem;
+}
+
+nav a:visited {
+    color: var(--green);
+}
+
+.footer-crumb a:visited {
+    color: var(--light-gray);
+}
+
+/*====== UTILITY CLASSES ======*/
+
+.hidden {
+    display: none;
+}

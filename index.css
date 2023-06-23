@@ -24,7 +24,7 @@ Date: April 2023
     --br-round: 50%;
     
     /*FONT SIZES*/
-    --fs-xs: .75rem;
+    --fs-xs: .8125rem;
     --fs-s: 1rem; /*16px*/
     --fs-m: 1.375rem; /*22px*/
     --fs-l: 2.75rem; /*44px*/
@@ -125,7 +125,6 @@ header {
 .hike-img {
     display: block;
     width: 100%;
-    max-height: 200px;
     margin: 0 auto 1.40em auto;
 }
 
@@ -140,35 +139,61 @@ header {
 /*====== HERO SECTION ======*/
 
 .hero-container {
-    max-height: 600px; /*!possible grid sizing*/
-    min-height: 300px;
-    background: center no-repeat url(assets/image\ 2\(1\).jpg);
-    margin-bottom: 1.75em;
+    margin-bottom: 1em;
+
+    display: grid;
+    position: relative;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: -2;
 }
 
 .hero-text {
-    max-height: 500px; /*!possible grid sizing*/
-    min-height: 300px;
-    max-width: 500px;
-    min-width: 300px;
-    background-color: rgba(0, 0, 0, .6);
-    padding: 2em 1em 0 1em;
-    
-    display: grid;
-    grid-template-areas: 
-        "title"
-        "desc"
-        "form";
-    grid-template-rows: 1fr 1fr .75fr;
-    grid-template-columns: 1fr;
+    padding: 2.25em 1.5em;
+    grid-row: 1;
+    grid-column: 1;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+@media (min-width: 800px) {
+    .hero-text {
+        flex-direction: row;
+    }
+
+    form {
+        align-self: flex-end;
+    }
+}
+
+.hero-text::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 575px;
+    left: 0;
+    bottom: 0;
+    grid-row: 1;
+    grid-column: 1;
+    z-index: -1;
 }
 
 .hero-title {
     color: var(--white);
     font-size: var(--fs-title);
     font-weight: 400;
-
-    grid-area: title;
+    /* padding: 0 .5em; */
+    margin-bottom: .5em;
 }
 
 .hero-adventure {
@@ -177,28 +202,30 @@ header {
 }
 
 .hero-description {
-    width: 75%;
+    width: 90%;
     font-size: var(--fs-xs);
     color: var(--white);
+    /* padding: 0 1em; */
+    margin-bottom: 4em;
+}
 
-    grid-area: desc;
+form {
+    width: 100%;
+    /* padding-bottom: 1em; */
+    margin: 0 auto;
 }
 
 .search-form-container {
-    max-width: 600px;
     background-color: var(--white);
     border-radius: var(--br-soft);
 
     display: flex;
     align-items: center;
-
-    grid-area: form;
 }
 
 .search-input {
     border: none;
-    width: 80%;
-    padding: .5em;
+    padding: .5em 0;
 }
 
 .search-input::placeholder {
@@ -206,11 +233,12 @@ header {
     font-size: var(--fs-xs);
     font-weight: 700;
     color: var(--gray);
+    padding-left: .25em;
     opacity: .30;
 }
 
 .search-icon {
-    padding: 0 .5em;
+    padding: .25em;
 }
 
 .city-search-btn {
@@ -221,8 +249,10 @@ header {
     letter-spacing: .1rem;;
     background-color: var(--green);
     padding: .5em 1.25em;
+    margin-left: auto;
     border: 2px solid var(--white);
     border-radius: var(--br-soft);
+
 }
 
 
@@ -234,7 +264,6 @@ header {
 
 .hikes-heading {
     color: var(--dark-gray);
-    margin-bottom: .5em;
 }
 
 .hikes-heading,
@@ -259,7 +288,9 @@ header {
 
 .learn-link {
     display: inline-block;
+    max-width: 100px;
     font-size: var(--fs-xs);
+    text-align: center;
     background-color: var(--green);
     color: var(--white);
     padding: .5em .5em;
@@ -267,7 +298,6 @@ header {
     border-radius: var(--br-soft);
     transition: 0.5s;
 }
-
 
 
 /*====== SITE INFO ======*/
@@ -408,4 +438,81 @@ nav a:visited {
 
 .hidden {
     display: none;
+}
+
+.padding {
+    padding: 0 .75em
+}
+
+
+/*====== MEDIA QUERIES ======*/
+
+@media (min-width: 1000px) { 
+    
+    .grid-container {
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        grid-template-columns: 1fr .5fr 1fr;
+        gap: 1em;
+    }
+
+    .hero-container {
+        grid-row: 1;
+        grid-column: 1 / -1;
+        z-index: -2;
+    }
+
+    .hero-text {
+        grid-row: 1 / 1;
+        grid-column: 1 / 2;
+        z-index: -1;
+    }
+
+    .hikes-heading {
+        grid-row: 3;
+    }
+    
+    .img-one {
+        width: 100%;
+        grid-row: 4;
+        grid-column: 1 / 3;
+    }
+
+    .hike-one,
+    .hike-two,
+    .hike-three {
+        padding: 0 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .hike-one {
+        grid-row: 4;
+        grid-column: 3;
+    
+    }
+    
+    .img-two {
+        width: 100%;
+        grid-row: 5;
+        grid-column: 2 / 4;
+    }
+    
+    .hike-two {
+        grid-row: 5;
+        grid-column: 1;
+    }
+    
+    .img-three {
+        width: 100%;
+        grid-row: 6;
+        grid-column: 1 / 3;
+    }
+    
+    .hike-three {
+        grid-row: 6;
+        grid-column: 3;
+    }
 }

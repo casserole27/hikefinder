@@ -162,18 +162,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .hero-text {
         flex-direction: row;
+        gap: 8rem;
     }
 
     form {
         align-self: flex-end;
+        justify-self: flex-end;
     }
-}
+}    
 
 .hero-text::after {
     content: '';
@@ -192,7 +195,6 @@ header {
     color: var(--white);
     font-size: var(--fs-title);
     font-weight: 400;
-    /* padding: 0 .5em; */
     margin-bottom: .5em;
 }
 
@@ -202,16 +204,14 @@ header {
 }
 
 .hero-description {
-    width: 90%;
+    max-width: 500px;
     font-size: var(--fs-xs);
     color: var(--white);
-    /* padding: 0 1em; */
     margin-bottom: 4em;
 }
 
 form {
     width: 100%;
-    /* padding-bottom: 1em; */
     margin: 0 auto;
 }
 
@@ -224,6 +224,7 @@ form {
 }
 
 .search-input {
+    width: 100%;
     border: none;
     padding: .5em 0;
 }
@@ -233,12 +234,12 @@ form {
     font-size: var(--fs-xs);
     font-weight: 700;
     color: var(--gray);
-    padding-left: .25em;
+    /* padding-left: .25em; */
     opacity: .30;
 }
 
 .search-icon {
-    padding: .25em;
+    padding: .5em;
 }
 
 .city-search-btn {
@@ -264,6 +265,7 @@ form {
 
 .hikes-heading {
     color: var(--dark-gray);
+    /* font-size: var(--fs-s); */
 }
 
 .hikes-heading,
@@ -288,7 +290,7 @@ form {
 
 .learn-link {
     display: inline-block;
-    max-width: 100px;
+    max-width: 200px;
     font-size: var(--fs-xs);
     text-align: center;
     background-color: var(--green);
@@ -304,15 +306,31 @@ form {
 
 .site-info-container {
     background-color: #FAFAFA;
-    padding: 2.25em 3em;
+    padding: 2.25em 4em;
+    margin-bottom: 2em;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2.5em;
+}
+
+@media (min-width: 800px) {
+    .site-info-container {
+        margin-bottom: 5em;
+        grid-auto-flow: column;
+    }
+
 }
 
 .info-item {
     text-align: center;
-    margin-bottom: 1.75em;
 }
 
 .info-icon {
+    width: 30px;
+    height: 30px;
+    /* width: max(2rem, 3rem); */
+    /* width: 20px; */
+    /* max-width: 60px; */
     display: inline-block;
     color: var(--dark-gray);
     margin-bottom: 1em;
@@ -356,6 +374,7 @@ footer {
 .footer-sign-up-btn,
 .footer-log-in-btn {
     font-family: inherit;
+    font-size: var(--fs-xs);
     text-transform: uppercase;
     background-color: var(--black);
     color: var(--white);
@@ -412,10 +431,10 @@ button:hover {
     transform: scale(1.02);
 }
 
-.footer-sign-up-btn:hover,
+ .footer-sign-up-btn:hover,
 .footer-log-in-btn:hover {
-    padding: .5em;
-}
+    padding: .25em;
+} 
 
 .footer-sign-up-btn:focus,
 .footer-log-in-btn:focus {
@@ -455,11 +474,12 @@ nav a:visited {
     background-color: var(--green);
     color: var(--white);
     position: fixed;    
-top: 10%;
+    top: 5%;
     left: 5%;
     right: 5%;
     padding: 1rem;
     margin: 0 auto;
+    border: 2px solid var(--white);
     border-radius: var(--br-soft);
     z-index: 2;
 }
@@ -482,7 +502,7 @@ top: 10%;
 .input-container,
 .form-btns,
 .xcl-container {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto 2rem auto;
 }
 
@@ -528,7 +548,7 @@ form button {
 }
 
 .cancel-btn {
-    width: 100px;
+    width: 150px;
     background-color: hotpink;
     padding: .5rem;
     border-radius: var(--br-soft);
@@ -559,8 +579,17 @@ form button {
 
 /*====== MEDIA QUERIES ======*/
 
+   
+
 @media (min-width: 1000px) { 
-    
+
+    :root {
+        --fs-xs: 1.375rem;
+        --fs-m: 2rem;
+        --fs-title: 4rem;
+    }
+
+      
     .grid-container {
         display: grid;
         grid-template-rows: repeat(5, min-content);
@@ -578,6 +607,10 @@ form button {
         grid-row: 1 / 1;
         grid-column: 1 / 2;
         z-index: -1;
+    }
+
+    .hero-description {
+        font-size: 1.625rem;
     }
 
     .hikes-heading {
@@ -626,5 +659,10 @@ form button {
     .hike-three {
         grid-row: 6;
         grid-column: 3;
+    }
+
+    .info-icon {
+        width: 50px;
+        height: 50px;
     }
 }

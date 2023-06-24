@@ -57,10 +57,7 @@
     
     </header> 
 
-    <!-- Login and Sign Up Form -->
-    <!--https://www.w3schools.com/howto/howto_css_login_form.asp-->
-
-    <div class="login-modal " id="login-modal">
+    <div class="login-modal hidden" id="login-modal">
 
         <button 
             class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
@@ -103,7 +100,7 @@
 
     </div> <!--close modal div-->
     
-    <div class="modal-overlay"></div>
+    <div class="modal-overlay hidden"></div>
 
     </div>
     <!--end form-->
@@ -125,7 +122,7 @@
 
                     <p class="hero-description">
                         Your next hiking adventure awaits.
-                        Get on the trail with deatiled maps and updates
+                        Get on the trail with detailed maps and updates
                         shared by hikers like you.
                     </p>
                     </div><!--close hero sub text-->
@@ -139,8 +136,7 @@
                                 name="city-search"
                                 aria-label="search by city"
                                 placeholder="Search by city"
-                                class="search-input"
-                                >
+                                class="search-input">
                             <button 
                                 type="submit"
                                 class="city-search-btn"
@@ -214,15 +210,19 @@
         <section class="site-info-container">
 
             <article class="info-item">
-                <i class="fa-solid fa-bell fa-xl info-icon" alt=""></i>
+                <!-- <i class="fa-solid fa-bell fa-xl info-icon" alt=""></i> -->
+                <div>
+                <img src="assets/bell-solid 1.svg" class="info-icon" alt="">
                 <h3 class="info-title">Sign up for notifications</h3>
+                </div>
                 <p class="info-description">
                     <a href="#" class="info-link">Sign up</a> to get conditions, alerts, information on pop-up events and interesting stories.
                 </p>
             </article>
 
             <article class="info-item">
-                <i class="fa-solid fa-location-dot fa-xl info-icon"></i>
+                <!-- <i class="fa-solid fa-location-dot fa-xl info-icon"></i> -->
+                <img src="assets/location-dot-solid 2.svg" class="info-icon" alt="">
                 <h3 class="info-title">Get the HikeFinder App</h3>
                 <p class="info-description">
                     <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
@@ -230,7 +230,8 @@
             </article>
 
             <article class="info-item">
-                <i class="fa-solid fa-share fa-xl info-icon"></i>
+                <!-- <i class="fa-solid fa-share fa-xl info-icon"></i> -->
+                <img src="assets/share-solid 1.png" class="info-icon" alt="">
                 <h3 class="info-title">Share Trails</h3>
                 <p class="info-description">
                     <a href="#" class="info-link">Share your hiking adventures</a> with the community and keep a record of your travels.
@@ -267,10 +268,3 @@
 </body>
 </html>
 
-<!--
-Adding Google Maps to websites
-https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript
-
-Pseudo-elements positioning on grid:
-https://www.youtube.com/watch?v=CcoPk7udIpA&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998&index=8
--->

@@ -75,6 +75,12 @@ Stretch Goals
 
 [Scrimba help](https://different-marmoset-f7b.notion.site/HikeFinder-617beb91a1974dd19cbf74f086135a52)
 
+[W3 Schools - how to create a login form](https://www.w3schools.com/howto/howto_css_login_form.asp)
+
+[Kevin Powell - Pseudo-elements positioning on grid](https://www.youtube.com/watch?v=CcoPk7udIpA&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998&index=8)
+
+[Adding Google Maps to websites](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
+
 
 ## Author
 

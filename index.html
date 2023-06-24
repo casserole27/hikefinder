@@ -60,10 +60,10 @@
     <!-- Login and Sign Up Form -->
     <!--https://www.w3schools.com/howto/howto_css_login_form.asp-->
 
-    <div class="login-modal hidden" id="login-modal">
+    <div class="login-modal " id="login-modal">
 
         <button 
-            class="close-modal-btn fa-solid fa-circle-xmark hidden" 
+            class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
             id="close-modal-btn"
             aria-label="close modal">
         </button>
@@ -73,28 +73,37 @@
             <div class="input-container">
 
                 <label for="username">Username</label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <input type="text" placeholder="Enter Username" name="username" class="margin-bottom" required >
 
                 <label for="password">Password</label>
-                <input type="password" placeholder="Enter Password" name="password" required>
-
-                <button type="submit">Login</button>
-                <button type="submit">Sign Up</button>
-
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember be
-                </label>
-
+                <input type="password" placeholder="Enter Password" name="password" class="margin-bottom" required>
+                
             </div> <!--close input container-->
 
+
+            <div class="form-btns">
+                
+                <button type="submit" class="login margin-bottom">Login</button>
+                <button type="submit" class="signup margin-bottom">Sign Up</button>
+           
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" class="save-check"> Remember me
+                </label>
+
+            </div><!--close form btns-->    
+
             <div class="xcl-container">
+                
                 <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
                 <span class="forgot-pwd">Forgot <a href="#">password?</a></span>
+            
             </div><!--close xcl container-->
 
         </form>
 
     </div> <!--close modal div-->
+    
+    <div class="modal-overlay"></div>
 
     </div>
     <!--end form-->

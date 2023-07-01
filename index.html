@@ -29,8 +29,6 @@
 
  <body>
 
-    <div class="body-container">
-
     <header>
         
         <div class="header-container">
@@ -42,7 +40,7 @@
                 aria-label="navigation menu">
             </button>
 
-        </div><!--close header container-->   
+        </div> <!--close header container-->   
             
         <nav class="header-nav">
             
@@ -65,7 +63,7 @@
             aria-label="close modal">
         </button>
 
-        <form action="#">
+        <form class="modal-form" action="#">
             
             <div class="input-container">
 
@@ -87,22 +85,22 @@
                     <input type="checkbox" checked="checked" name="remember" class="save-check"> Remember me
                 </label>
 
-            </div><!--close form btns-->    
+            </div> <!--close form btns-->    
 
             <div class="xcl-container">
                 
                 <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
-                <span class="forgot-pwd">Forgot <a href="#">password?</a></span>
+                <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
             
-            </div><!--close xcl container-->
+            </div> <!--close xcl container-->
 
         </form>
 
-    </div> <!--close modal div-->
+    </div>
     
     <div class="modal-overlay hidden"></div>
 
-    </div>
+    <!-- </div> -->
     <!--end form-->
 
     <main class="main-container">
@@ -125,6 +123,8 @@
 
                         </div><!--close hero text-->
 
+                    <div class="search-form">    
+
                     <form action="#">
 
                         <div class="search-form-container">
@@ -145,6 +145,7 @@
                         </div><!--close search form container-->
                     
                     </form>
+                    </div>
 
                 </div><!--close hero-container-->
         

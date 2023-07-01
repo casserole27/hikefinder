@@ -1,0 +1,105 @@
+/****** VARIABLES ******/
+
+:root {
+    
+    /*COLORS*/
+    --white: #fff;
+    --off-white: #FAFAFA;
+    --black: #000;
+    --dark-gray: #4E4E4E;
+    --gray: #565656;
+    --light-gray: lightgray;
+    --green: #638A5C;
+    --pale-yellow: #ECE480;
+ 
+    /*BORDER RADIUS*/
+    --br-soft: .25rem;
+    --br-round: 50%;
+    
+    /*FONT SIZES*/
+    --fs-xs: .8125rem;
+    --fs-s: 1rem; /*16px*/
+    --fs-m: 1.375rem; /*22px*/
+    --fs-l: 2.75rem; /*44px*/
+    --fs-title: 2.125rem; /*34px*/
+}
+
+/****** MARGIN AND PADDING RESET ******/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******* GLOBAL STYLES *******/
+
+body {
+    background-color: var(--off-white);
+    font-family: 'Inter', sans-serif;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+button,
+a,
+input {
+    transition: 0.5s ease;
+}
+
+
+a:hover {
+    color: hotpink;
+    margin-right: .5em;
+    transform: scale(1.2);
+}
+
+button:hover {    
+    color: var(--black);
+    background-color: var(--pale-yellow);
+    border-radius: .75rem;
+    transform: scale(1.02);
+}
+
+input:focus,
+a:focus {
+    padding: .5em;
+    border-radius: var(--br-soft);
+}
+
+input:focus,
+a:focus,
+button:focus {
+    outline: 5px solid var(--pale-yellow);
+}
+
+a:focus,
+button:focus {
+    transform: scale(1.01);
+}
+
+/*====== UTILITY CLASSES ======*/
+
+.hidden {
+    display: none;
+}
+
+.padding {
+    padding: 0 .75em
+}

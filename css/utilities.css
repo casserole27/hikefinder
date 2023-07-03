@@ -66,20 +66,22 @@ input {
 
 a:hover {
     color: hotpink;
-    margin-right: .5em;
-    transform: scale(1.2);
+    /* margin-right: .5em; */
+    /* transform: scale(1.2);    */
 }
+
+/*commented code is interfering with nav button transform*/
 
 button:hover {    
     color: var(--black);
     background-color: var(--pale-yellow);
     border-radius: .75rem;
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
 }
 
 input:focus,
 a:focus {
-    padding: .5em;
+    padding: .25em;
     border-radius: var(--br-soft);
 }
 
@@ -89,10 +91,10 @@ button:focus {
     outline: 5px solid var(--pale-yellow);
 }
 
-a:focus,
+/* a:focus,
 button:focus {
     transform: scale(1.01);
-}
+} */
 
 /*====== UTILITY CLASSES ======*/
 

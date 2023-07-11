@@ -82,23 +82,21 @@ input {
     transition: 0.5s ease;
 }
 
-
 a:hover {
     color: hotpink;
-    /* margin-right: .5em; */
-    /* transform: scale(1.2);    */
-}
-
-/*commented code is interfering with nav button transform*/
+    text-decoration: underline;
+}               
 
 button:hover {    
     color: var(--black);
     background-color: var(--pale-yellow);
-    border-radius: .75rem;
-    /* transform: scale(1.02); */
+    border-radius: 1rem;
 }
 
-input:focus,
+input:hover {
+    background-color: var(--pale-yellow);
+}
+
 a:focus {
     padding: .25em;
     border-radius: var(--br-soft);
@@ -107,13 +105,13 @@ a:focus {
 input:focus,
 a:focus,
 button:focus {
-    outline: 5px solid var(--pale-yellow);
+    outline: 5px solid gold;
 }
 
-/* a:focus,
+input:focus,
 button:focus {
-    transform: scale(1.01);
-} */
+    border-radius: var(--br-soft);
+}
 
 /*====== UTILITY CLASSES ======*/
 
@@ -170,7 +168,7 @@ button:focus {
 }
 
 nav a:visited {
-    color: var(--green);
+    color: darkblue;
 }
 
 .nav-btn {
@@ -278,7 +276,7 @@ nav a:visited {
     text-transform: uppercase;
     letter-spacing: .1rem;;
     background-color: var(--green);
-    padding: .5em 1.25em;
+    padding: 1rem 1.5rem;
     margin-left: auto;
     border: 2px solid var(--white);
     border-radius: var(--br-soft);
@@ -415,6 +413,8 @@ footer {
     text-transform: uppercase;
     background-color: var(--black);
     color: var(--white);
+    padding: .25rem;
+
 }
 
 .footer-logo {
@@ -430,6 +430,11 @@ footer {
     padding-bottom: 2em;
 }
 
+.footer-crumb a:visited {
+    color: var(--pale-yellow);
+}
+
+/*
 .footer-sign-up-btn:hover,
 .footer-log-in-btn:hover {
     padding: .25em;
@@ -441,10 +446,8 @@ footer {
     border-radius: var(--br-soft);
 }
 
-.footer-crumb a:visited {
-    color: var(--light-gray);
-}
 
+*/                          
 
 /*====== EXPLORE PAGE ======*/
 

@@ -36,6 +36,8 @@ Date: April 2023
     --fs-title: 2.125rem; /*34px*/
 
     --utility-padding: .75rem;
+    --header-logo: 150px;
+    --footer-logo: 100px;
     --info-icon-width: 30px;
     --info-icon-height: 30px;
     --star-width: 1rem;
@@ -126,7 +128,7 @@ button:focus {
 /*====== HEADER NAV MENU STYLING ======*/
 
 .header-logo {
-    width: 200px;
+    width: var(--header-logo);
 }
 
 .header-container {
@@ -415,10 +417,10 @@ footer {
     color: var(--white);
 }
 
-.logo-white {
+.footer-logo {
     display: block;
-    max-width: 110px;
-    margin: 0 auto .25em auto;
+    width: var(--footer-logo);
+    margin: 0 auto;
 }
 
 .copyright-info {
@@ -555,6 +557,8 @@ footer {
         --fs-title: 4rem;
 
         --utility-padding: 2rem;
+        --header-logo: 250px;
+        --footer-logo: 200px;
         --info-icon-width: 60px;
         --info-icon-height: 60px;
         --star-width: 2rem;
@@ -667,6 +671,18 @@ footer {
     .info-icon {
         width: 50px;
         height: 50px;
+    }
+
+    footer {
+        padding: 4.5rem 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-crumb {
+        padding-left: 3rem;
     }
 }
 

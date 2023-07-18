@@ -29,6 +29,8 @@
 
  <body>
 
+    <!-- ====== HEADER MENU ====== -->
+
     <header class="padding">
         
         <div class="header-container">
@@ -47,61 +49,73 @@
             <ul class="header-ul">
                 <li class="header-crumb"><a href="index.html">home</a></li>
                 <li class="header-crumb"><a href="explore.html">explore</a></li>
-                <li class="header-crumb"><button class="sign-up-btn" id="sign-up-btn">sign up</button></li>
-                <li class="header-crumb"><button class="log-in-btn" id="log-in-btn">log in</button></li>
+                <li class="header-crumb">
+                    <button class="signup-btn" id="signup-btn" data-modal="modal">sign up</button>
+                </li>
+                <li class="header-crumb">
+                    <button class="login-btn" id="login-btn" data-modal="modal">log in</button>
+                </li>
             </ul>
 
         </nav>
     
     </header> 
 
-    <div class="login-modal hidden" id="login-modal">
+    <!-- ====== LOGIN / SIGNUP MODAL ====== -->
 
-        <button 
-            class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
-            id="close-modal-btn"
-            aria-label="close modal">
-        </button>
+    <div class="modal-overlay hidden" id="modal-overlay">
+        
+        <div class="login-modal hidden" id="login-modal">
 
-        <form class="modal-form" action="#">
+            <button 
+                class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
+                id="modal-close-btn"
+                aria-label="close modal">
+            </button>
+
+            <form class="modal-form" action="#">
+                
+                <div class="input-container">
+
+                    <label for="modal-username">Username</label>
+                    <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
+
+                    <label for="modal-password">Password</label>
+                    <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
+                    
+                </div> <!--close input container-->
+
+                <div class="form-btns">
+                    
+                    <button type="submit" class="login margin-bottom" id="modal-login-btn">Login</button>
+                    <button type="button" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
             
-            <div class="input-container">
+                    <label class="save-check-label">
+                        <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
+                    </label>
 
-                <label for="username">Username</label>
-                <input type="text" placeholder="Enter Username" name="username" class="margin-bottom" required >
-
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter Password" name="password" class="margin-bottom" required>
+                </div> <!--close form btns-->   
                 
-            </div> <!--close input container-->
+                <div class="modal-footer">
 
+                    <div class="xcl-container">
+                        
+                        <button type="button" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
+                        <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
+                    
+                    </div> <!--close xcl container-->
 
-            <div class="form-btns">
-                
-                <button type="submit" class="login margin-bottom">Login</button>
-                <button type="submit" class="signup margin-bottom">Sign Up</button>
-           
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" class="save-check"> Remember me
-                </label>
+                </div><!--close modal footer-->
+            </form>
 
-            </div> <!--close form btns-->    
-
-            <div class="xcl-container">
-                
-                <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
-                <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
-            
-            </div> <!--close xcl container-->
-
-        </form>
-
-    </div>
+        </div>
     
-    <div class="modal-overlay hidden"></div>
+  </div>
 
     <!-- </div> -->
     <!--end form-->
+
+    <!-- ====== HERO SECTION ====== -->
 
     <main class="main-container">
         
@@ -148,6 +162,8 @@
                     </div>
 
                 </div><!--close hero-container-->
+        
+    <!-- ====== HIKES / GRID ====== -->
         
                 <h2 class="hikes-heading padding">Hikes near Bergen</h2>
 
@@ -198,6 +214,8 @@
 
         </section>
 
+    <!-- ====== SITE INFO / GRID ====== -->
+    
         <section class="site-info-container">
 
             <article class="info-item">
@@ -234,6 +252,8 @@
     
     </main>
 
+    <!-- ====== FOOTER ====== -->
+    
     <footer>
         
         <nav>
@@ -241,8 +261,12 @@
             <ul class="footer-nav">
                 <li class="footer-crumb"><a href="index.html">home</a></li>
                 <li class="footer-crumb"><a href="explore.html">explore</a></li>
-                <li class="footer-crumb"><button class="footer-sign-up-btn" id="footer-sign-up-btn">sign up</button></li>
-                <li class="footer-crumb"><button class="footer-log-in-btn" id="footer-log-in-btn">log in</button></li>
+                <li class="footer-crumb">
+                    <button class="footer-signup-btn" id="footer-signup-btn" data-modal="modal">sign up</button>
+                </li>
+                <li class="footer-crumb">
+                    <button class="footer-login-btn" id="footer-login-btn" data-modal="modal">log in</button>
+                </li>
             </ul>
 
         </nav>

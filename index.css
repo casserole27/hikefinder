@@ -155,8 +155,8 @@ button:focus {
     margin-bottom: .5em;
 }
 
-.sign-up-btn,
-.log-in-btn {
+.signup-btn,
+.login-btn {
     display: inline-block;
     width: 150px;
     font-family: inherit;;
@@ -180,13 +180,13 @@ nav a:visited {
     transform: rotate(90deg);
 }
 
-.sign-up-btn {
+.signup-btn {
     background-color: var(--green);
     color: var(--white);
     border: 2px solid var(--green);
 }
 
-.log-in-btn {
+.login-btn {
     border: 2px solid var(--dark-gray);
 }
 
@@ -254,7 +254,7 @@ nav a:visited {
 .search-input {
     width: 100%;
     border: none;
-    padding: .5em 0;
+    padding: .5em .25em;
 }
 
 .search-input::placeholder {
@@ -263,6 +263,7 @@ nav a:visited {
     font-weight: 700;
     color: var(--gray);
     opacity: .30;
+    /* padding: 1rem; */
 }
 
 .search-icon {
@@ -406,8 +407,8 @@ footer {
     text-transform: uppercase;
 }
 
-.footer-sign-up-btn,
-.footer-log-in-btn {
+.footer-signup-btn,
+.footer-login-btn {
     font-family: inherit;
     font-size: var(--fs-xs);
     text-transform: uppercase;

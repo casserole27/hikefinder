@@ -7,9 +7,6 @@ Date: April 2023
 /****** VARIABLES ******/
 
 let focusedElBeforeModal;
-let loginArray = [];
-let signupArray = [];
-// const modalOverlay = document.getElementById('modal-overlay')
 const loginModal = document.getElementById('login-modal')
 const modalUsername = document.getElementById('modal-username')
 const modalPw = document.getElementById('modal-password')

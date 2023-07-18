@@ -1,5 +1,5 @@
 /*====== MEDIA QUERIES ======*/
- 
+
 @media (min-width: 1000px) { 
 
     :root {
@@ -7,6 +7,13 @@
         --fs-s: 1.25rem;
         --fs-m: 2rem;
         --fs-title: 4rem;
+
+        --utility-padding: 2rem;
+        --header-logo: 250px;
+        --footer-logo: 200px;
+        --info-icon-width: 60px;
+        --info-icon-height: 60px;
+        --star-width: 2rem;
     }
 
     header {
@@ -41,21 +48,32 @@
         grid-template-columns: auto 1fr;
     }
 
-    .search-form {
-        grid-column: 2;
-        align-self: flex-end;
+    .hero-text {
+        padding: 2.25em 3em;
+    }
+
+    .hero-title {
+        padding-top: 2em;
     }
 
     .hero-description {
+        padding-bottom: 5em;
         font-size: 1.625rem;
     }
 
+    .search-form {
+        padding: 1rem 3rem;
+        /* grid-column: 2; */
+        grid-column: 1 / -1;
+        align-self: flex-end;
+    }
+ 
     .hikes-heading {
         grid-row: 3;
     }
     
     .hikes-heading,
-    article .hikes-title {
+    .hikes-title {
         font-size: var(--fs-l);
     }
 
@@ -106,6 +124,24 @@
     .info-icon {
         width: 50px;
         height: 50px;
+    }
+
+    footer {
+        padding: 4.5rem 2rem;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-crumb {
+        padding-left: 3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .search-form {
+        grid-column: 2;
     }
 }
 

@@ -9,7 +9,7 @@ Date: April 2023
 let focusedElBeforeModal;
 let loginArray = [];
 let signupArray = [];
-const modalOverlay = document.getElementById('modal-overlay')
+// const modalOverlay = document.getElementById('modal-overlay')
 const loginModal = document.getElementById('login-modal')
 const modalUsername = document.getElementById('modal-username')
 const modalPw = document.getElementById('modal-password')
@@ -57,27 +57,18 @@ function showModal() {
     //save current focus on the document
     focusedElBeforeModal = document.activeElement;
 
-    loginModal.classList.remove('hidden');
-    modalOverlay.classList.remove('hidden');
+    //showModal method for dialog element
+    loginModal.showModal();
 
     closeModalBtn.addEventListener('keydown', trapFocus)
     document.addEventListener('keydown', trapFocus)
-    closeModalBtn.focus();               
 }
 
 
 function hideModal() {
 
-    if (modalRememberCheckbox.checked === true) {
-        modalUsername.value = '';
-        modalPw.value = '';
-    
-    } else if (modalRememberCheckbox.checked === false) {
-        clearModal();
-    }
-
-    loginModal.classList.add('hidden');
-    modalOverlay.classList.add('hidden');
+    //close method for dialog element 
+    loginModal.close();
 
     closeModalBtn.removeEventListener('keydown', trapFocus)
     document.removeEventListener('keydown', trapFocus)
@@ -89,8 +80,6 @@ function hideModal() {
 function clearModal() {
     modalUsername.value = '';
     modalPw.value = '';
-    loginArray = [];
-    signupArray = [];
 };    
 
 
@@ -104,23 +93,15 @@ document.addEventListener('click', e => {
     } else if (e.target.dataset.modal) {
         showModal();
     
-    } else if (e.target.id === 'modal-close-btn' || (e.target == modalOverlay)) {
+    } else if (e.target.id === 'modal-close-btn' || (e.target == loginModal) || (e.target.id === 'modal-login-btn') || (e.target.id === 'modal-signup-btn')) {
         hideModal();
-        clearModal();
-    
-    } else if (e.target.id === 'modal-login-btn') {
-        e.preventDefault();
-        loginArray.push(modalUsername.value, modalPw.value);
-        hideModal();        
-   
-    } else if (e.target.id === 'modal-signup-btn') {
-        e.preventDefault()
-        signupArray.push(modalUsername.value, modalPw.value);
-        hideModal();
-
-    } else if (e.target.id === 'modal-cancel-btn') {
-        clearModal();
     }    
+    // formmethod = "dialog" on Cancel form button in HTML automatically clears the form
+
 });
 
-
+//on close, prevent form from submitting and clear the modal
+loginModal.addEventListener('close', e => {
+    e.preventDefault()
+    clearModal()
+})

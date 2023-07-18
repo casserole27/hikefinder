@@ -106,17 +106,18 @@
                     </div> <!--close xcl container-->
 
                 </div><!--close modal footer-->
+            
             </form>
 
-        </div>
+        </div> <!--close login modal div-->
     
-  </div>
+    </div><!--close modal overlay div-->
 
     <!--end form-->
 
     <!-- ====== HERO SECTION ====== -->
 
-    <main class="main-container">
+    <main>
         
         <section class="grid-container">
 
@@ -124,41 +125,43 @@
                 
                     <div class="hero-text">    
 
-                    <h1 class="hero-title">Find Your Next 
-                        <span class="hero-adventure">Adventure</span>
-                    </h1>
+                        <h1 class="hero-title">Find Your Next 
+                            <span class="hero-adventure">Adventure</span>
+                        </h1>
 
-                    <p class="hero-description">
-                        Your next hiking adventure awaits.
-                        Get on the trail with detailed maps and updates
-                        shared by hikers like you.
-                    </p>
+                        <p class="hero-description">
+                            Your next hiking adventure awaits.
+                            Get on the trail with detailed maps and updates
+                            shared by hikers like you.
+                        </p>
 
                     </div><!--close hero text-->
 
                     <div class="search-form">    
 
-                    <form action="#">
+                        <form action="#">
 
-                        <div class="search-form-container">
-                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                            <input 
-                                type="search" 
-                                id="city-search" 
-                                name="city-search"
-                                aria-label="search by city"
-                                placeholder="Search by city"
-                                class="search-input">
-                            <button 
-                                type="submit"
-                                class="city-search-btn"
-                                id="city-search-btn">
-                                Search
-                            </button>    
-                        </div><!--close search form container-->
-                    
-                    </form>
-                    </div>
+                            <div class="search-form-container">
+            
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input 
+                                    type="search" 
+                                    id="city-search" 
+                                    name="city-search"
+                                    aria-label="search by city"
+                                    placeholder="Search by city"
+                                    class="search-input">
+                                <button 
+                                    type="submit"
+                                    class="city-search-btn"
+                                    id="city-search-btn">
+                                    Search
+                                </button>    
+            
+                            </div><!--close search form container-->
+                        
+                        </form>
+                    </div><!--close search form div-->
 
                 </div><!--close hero-container-->
         
@@ -175,7 +178,7 @@
                     <p class="hikes-description">
                         Fløibanen is one of Norway's most visited attractions. At the top of Fløyen you will find a large and varied hiking area, spectacular views of the city.
                     </p>
-                    <a href="#" class="learn-link">
+                    <a href="https://floyen.no/en/" class="learn-link">
                         Learn More
                     </a>
                 
@@ -190,7 +193,7 @@
                     <p class="hikes-description">
                         Ulriken is the highest of the Seven Mountains that surround the city of Bergen, Norway. It has a height of 643 meters (2,110 ft) above sea level.
                     </p>
-                    <a href="#" class="learn-link">
+                    <a href="https://en.visitbergen.com/things-to-do/hike-up-mount-ulriken-p1710093" class="learn-link">
                         Learn More
                     </a>
             
@@ -205,7 +208,7 @@
                     <p class="hikes-description">
                         Landåsfjellet is a lower plateau south of Ulriken/Haugavarden which offers numerous trails, and is almost a separate hiking region by its own.
                     </p>
-                    <a href="#" class="learn-link">
+                    <a href="https://www.alltrails.com/trail/norway/vestland/landasfjellet?u=i" class="learn-link">
                         Learn More
                     </a>
                 
@@ -222,7 +225,7 @@
                 <img src="assets/bell-solid.svg" class="info-icon" alt="">
                 <h3 class="info-title">Sign up for notifications</h3>
                 <p class="info-description">
-                    <a href="#" class="info-link">Sign up</a> to get conditions, alerts, information on pop-up events and interesting stories.
+                    <button class="info-link" data-modal="modal">Sign up</button> to get conditions, alerts, information on pop-up events and interesting stories.
                 </p>
             
             </article>
@@ -242,7 +245,7 @@
                 <img src="assets/share-solid.png" class="info-icon" alt="">
                 <h3 class="info-title">Share Trails</h3>
                 <p class="info-description">
-                    <a href="#" class="info-link">Share your hiking adventures</a> with the community and keep a record of your travels.
+                    <button class="info-link" data-modal="modal">Share your hiking adventures</button> with the community and keep a record of your travels.
                 </p>
 
             </article>

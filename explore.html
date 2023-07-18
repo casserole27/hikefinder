@@ -30,6 +30,8 @@
 
  <body>
 
+    <!-- ====== HEADER MENU ====== -->
+
     <header class="padding">
     
         <div class="header-container">
@@ -105,161 +107,182 @@
                     </div> <!--close xcl container-->
 
                 </div><!--close modal footer-->
+            
             </form>
 
-        </div>
+        </div><!--close login modal-->
     
-  </div>
+    </div><!--close modal overlay-->
 
     <!--end form-->
 
-    <main class="main-container">
+    <!-- ====== HERO SECTION ====== -->
+
+    <main>
         
-        <section class="explore-grid-container">
+        <section>
 
-            <div class="hero-container">
+                <div class="hero-container">
                 
-                <div class="hero-text">    
+                    <div class="hero-text">    
 
-                <h1 class="hero-title">Find Your Next 
-                    <span class="hero-adventure">Adventure</span>
-                </h1>
+                        <h1 class="hero-title">Find Your Next 
+                            <span class="hero-adventure">Adventure</span>
+                        </h1>
 
-                <p class="hero-description">
-                    Your next hiking adventure awaits.
-                    Get on the trail with detailed maps and updates
-                    shared by hikers like you.
-                </p>
-
-                </div><!--close hero text-->
-
-            <form class="search-form" action="#">
-
-                <div class="search-form-container">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input 
-                        type="search" 
-                        id="city-search" 
-                        name="city-search"
-                        aria-label="search by city"
-                        placeholder="Search by city"
-                        class="search-input">
-                    <button 
-                        type="submit"
-                        class="city-search-btn"
-                        id="city-search-btn">
-                        Search
-                    </button>    
-                </div><!--close search form container-->
-            
-            </form>
-
-        </div><!--close hero-container-->
-
-        <section class="explore-container">
-
-            <h2 class="explore-subtitle padding">Explore Curated Trails Near</h2>
-
-            <div class="explore-flex">
-
-                <div class="article-flex">    
-                    <article class="explore-one padding">
-                    
-                        <h3 class="explore-title">Tryon Creek State Area</h3>
-                        <p class="explore-rating">
-                            Moderate
-                            <span><img src="/assets/star-solid.png" class="explore-star" alt=""></span>        
-                            4.5 (428)</p>
-
-                        <img src="assets/explore-trail-1.png" class="explore-img" alt="sunlight shines through pine forest trail surrounded by greenery">    
-
-                        <p class="explore-description border-bottom">
-                            670-acre forested area along a ravine with well-maintained trails for hikers, horses & leashed dogs.
-                        </p>
-                    
-                    </article>
-
-                    <article class="explore-two padding">
-
-                        <img src="assets/explore-trail-2.png" class="explore-img" alt="blue sky with tall mountain, white clouds, and forest surrounding a blue lake">
-                        <h3 class="explore-title">Marquam Nature Park</h3>
-                        <p class="explore-rating">
-                            Easy
-                            <span><img src="/assets/star-solid.png" class="explore-star" alt=""></span>     
-                            4.3 (432)</p>
-                        <p class="explore-description border-bottom">
-                            193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.
+                        <p class="hero-description">
+                            Your next hiking adventure awaits.
+                            Get on the trail with detailed maps and updates
+                            shared by hikers like you.
                         </p>
 
-                    </article>
+                    </div><!--close hero text-->
 
-                    <article class="explore-three padding">
+                    <div class="search-form">    
 
-                        <img src="assets/explore-trail-1.png" class="explore-img" alt="sunlight shines through pine forest trail surrounded by greenery">
-                        <h3 class="explore-title">Wildwood Trail Area</h3>
-                        <p class="explore-rating">
-                            Easy
-                            <span><img src="/assets/star-solid.png" class="explore-star" alt=""></span>            
-                            4.0 (207)</p>
-                        <p class="explore-description">
-                            The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.                
-                        </p>
+                        <form action="#">
+
+                            <div class="search-form-container">
+                                
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input 
+                                    type="search" 
+                                    id="city-search" 
+                                    name="city-search"
+                                    aria-label="search by city"
+                                    placeholder="Search by city"
+                                    class="search-input">
+                                <button 
+                                    type="submit"
+                                    class="city-search-btn"
+                                    id="city-search-btn">
+                                    Search
+                                </button>    
                             
-                    </article>
-                </div>
-
-                <!--element for Google Map-->
-                <!-- <div class="explore-map" id="explore-map"></div> -->
-                <img src="assets/map.png" class="hidden placeholder explore-map" alt="">
-            </div>
-
-        </section>
-
-        <section class="site-info-container">
-
-            <article class="info-item">
+                            </div><!--close search form container-->
+                        
+                        </form>
                 
-                <img src="assets/bell-solid.svg" class="info-icon" alt="">
-                <h3 class="info-title">Sign up for notifications</h3>
-                <p class="info-description">
-                    <a href="#" class="info-link">Sign up</a> to get conditions, alerts, information on pop-up events and interesting stories.
-                </p>
+                    </div><!--close search form-->
+
+                </div><!--close hero-container-->
             
-            </article>
+            </section>    
 
-            <article class="info-item">
+        <!-- ====== EXPLORE HIKES / GRID ====== -->
 
-                <img src="assets/location-solid.svg" class="info-icon" alt="">
-                <h3 class="info-title">Get the HikeFinder App</h3>
-                <p class="info-description">
-                    <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
-                </p>
+            <section class="explore-container">
 
-            </article>
+                <h2 class="explore-subtitle padding">Explore Curated Trails Near</h2>
 
-            <article class="info-item">
+                <div class="explore-flex">
 
-                <img src="assets/share-solid.png" class="info-icon" alt="">
-                <h3 class="info-title">Share Trails</h3>
-                <p class="info-description">
-                    <a href="#" class="info-link">Share your hiking adventures</a> with the community and keep a record of your travels.
-                </p>
+                    <div class="article-flex">    
+                        <article class="explore-one padding">
+                        
+                            <img src="assets/explore-trail-1.png" class="explore-img" alt="sunlight shines through pine forest trail surrounded by greenery">    
+                            <h3 class="explore-title">Tryon Creek State Area</h3>
+                            <p class="explore-rating">
+                                Moderate
+                                <span><img src="/assets/star-solid.png" class="explore-star" alt=""></span>        
+                                4.5 (428)</p>
+                            <p class="explore-description border-bottom">
+                                670-acre forested area along a ravine with well-maintained trails for hikers, horses & leashed dogs.
+                            </p>
+                        
+                        </article>
 
-            </article>
+                        <article class="explore-two padding">
 
-        </section>
+                            <img src="assets/explore-trail-2.png" class="explore-img" alt="blue sky with tall mountain, white clouds, and forest surrounding a blue lake">
+                            <h3 class="explore-title">Marquam Nature Park</h3>
+                            <p class="explore-rating">
+                                Easy
+                                <span><img src="/assets/star-solid.png" class="explore-star" alt=""></span>     
+                                4.3 (432)</p>
+                            <p class="explore-description border-bottom">
+                                193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.
+                            </p>
+
+                        </article>
+
+                        <article class="explore-three padding">
+
+                            <img src="assets/explore-trail-1.png" class="explore-img" alt="sunlight shines through pine forest trail surrounded by greenery">
+                            <h3 class="explore-title">Wildwood Trail Area</h3>
+                            <p class="explore-rating">
+                                Easy
+                                <span><img src="/assets/star-solid.png" class="explore-star" alt=""></span>            
+                                4.0 (207)</p>
+                            <p class="explore-description">
+                                The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.                
+                            </p>
+                                
+                        </article>
+                    
+                    </div><!--close article flex-->
+
+                    <!--FOR LATER - element for Google Map-->
+                    <!-- <div class="explore-map" id="explore-map"></div> -->
+                    <img src="assets/map.png" class="hidden placeholder explore-map" alt="">
+                
+                </div><!--close explore flex-->
+
+            </section>
+
+    <!-- ====== SITE INFO / GRID ====== -->
     
+            <section class="site-info-container">
+
+                <article class="info-item">
+                    
+                    <img src="assets/bell-solid.svg" class="info-icon" alt="">
+                    <h3 class="info-title">Sign up for notifications</h3>
+                    <p class="info-description">
+                        <button class="info-link" data-modal="modal">Sign up</button> to get conditions, alerts, information on pop-up events and interesting stories.
+                    </p>
+                
+                </article>
+
+                <article class="info-item">
+
+                    <img src="assets/location-solid.svg" class="info-icon" alt="">
+                    <h3 class="info-title">Get the HikeFinder App</h3>
+                    <p class="info-description">
+                        <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
+                    </p>
+
+                </article>
+
+                <article class="info-item">
+
+                    <img src="assets/share-solid.png" class="info-icon" alt="">
+                    <h3 class="info-title">Share Trails</h3>
+                    <p class="info-description">
+                        <button class="info-link" data-modal="modal">Share your hiking adventures</button> with the community and keep a record of your travels.
+                    </p>
+
+                </article>
+
+            </section>
+
     </main>
 
+    <!-- ====== FOOTER ====== -->
+
     <footer>
-        
+    
         <nav>
             
             <ul class="footer-nav">
                 <li class="footer-crumb"><a href="index.html">home</a></li>
                 <li class="footer-crumb"><a href="explore.html">explore</a></li>
-                <li class="footer-crumb"><button class="footer-sign-up-btn" id="footer-sign-up-btn">sign up</button></li>
-                <li class="footer-crumb"><button class="footer-log-in-btn" id="footer-log-in-btn">log in</button></li>
+                <li class="footer-crumb">
+                    <button class="footer-signup-btn" id="footer-signup-btn" data-modal="modal">sign up</button>
+                </li>
+                <li class="footer-crumb">
+                    <button class="footer-login-btn" id="footer-login-btn" data-modal="modal">log in</button>
+                </li>
             </ul>
 
         </nav>
@@ -272,12 +295,6 @@
     </footer>
 
 <script src="index.js"></script>
-
-
-
-  
-
-  <!-- <script src="map.js"></script> -->
 
 </body>
 </html>

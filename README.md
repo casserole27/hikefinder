@@ -81,6 +81,10 @@ Stretch Goals
 
 [Adding Google Maps to websites](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
 
+- HTML dialog element
+[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+[Web Dev Simplified](https://blog.webdevsimplified.com/2023-04/html-dialog/)
+
 
 ## Author
 

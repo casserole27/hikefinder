@@ -63,9 +63,7 @@
 
     <!-- ====== LOGIN / SIGNUP MODAL ====== -->
 
-    <div class="modal-overlay hidden" id="modal-overlay">
-        
-        <div class="login-modal hidden" id="login-modal">
+        <dialog class="login-modal" id="login-modal">
 
             <button 
                 class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
@@ -73,7 +71,7 @@
                 aria-label="close modal">
             </button>
 
-            <form class="modal-form" action="#">
+            <form class="modal-form" method="dialog">
                 
                 <div class="input-container">
 
@@ -87,8 +85,8 @@
 
                 <div class="form-btns">
                     
-                    <button type="submit" class="login margin-bottom" id="modal-login-btn">Login</button>
-                    <button type="button" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
+                    <button value="login" class="login margin-bottom" id="modal-login-btn">Login</button>
+                    <button value="signup" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
             
                     <label class="save-check-label">
                         <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
@@ -100,7 +98,7 @@
 
                     <div class="xcl-container">
                         
-                        <button type="button" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
+                        <button formmethod="dialog" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
                         <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
                     
                     </div> <!--close xcl container-->
@@ -109,10 +107,8 @@
             
             </form>
 
-        </div> <!--close login modal div-->
+        </dialog> <!--close login modal div-->
     
-    </div><!--close modal overlay div-->
-
     <!--end form-->
 
     <!-- ====== HERO SECTION ====== -->

@@ -15,7 +15,8 @@
 
 .login-modal {
     max-width: 800px;
-    background-color: var(--dark-gray);
+    /* background-color: var(--dark-gray); */
+    background-color: none;
     color: var(--white);
     position: fixed;    
     top: 2%;
@@ -88,7 +89,7 @@ form button {
 }
 
 .save-check {
-   margin-bottom: 3rem;
+   margin-bottom: 2rem;
 }
 
 .save-check-label,
@@ -118,7 +119,7 @@ form button {
 .modal-footer {
     width: 100%;
     background-color: var(--green);
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .margin-bottom {

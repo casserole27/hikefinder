@@ -30,80 +30,87 @@
 
  <body>
 
-    <div class="body-container">
-
-        <header class="padding">
-        
-            <div class="header-container">
+    <header class="padding">
     
-                <img src="assets/logo.svg" class="header-logo" alt="HikeFinder">
-                <button 
-                    class="fa-solid fa-bars fa-lg nav-btn" 
-                    id="nav-btn"
-                    aria-label="navigation menu">
-                </button>
-    
-            </div> <!--close header container-->   
-                
-            <nav class="header-nav header-nav-hidden" id="header-nav">
-                
-                <ul class="header-ul">
-                    <li class="header-crumb"><a href="index.html">home</a></li>
-                    <li class="header-crumb"><a href="explore.html">explore</a></li>
-                    <li class="header-crumb"><button class="sign-up-btn" id="sign-up-btn">sign up</button></li>
-                    <li class="header-crumb"><button class="log-in-btn" id="log-in-btn">log in</button></li>
-                </ul>
-    
-            </nav>
-        
-        </header> 
+        <div class="header-container">
 
-    <div class="login-modal hidden" id="login-modal">
+            <img src="assets/logo.svg" class="header-logo" alt="HikeFinder">
+            <button 
+                class="fa-solid fa-bars fa-lg nav-btn" 
+                id="nav-btn"
+                aria-label="navigation menu">
+            </button>
 
-        <button 
-            class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
-            id="close-modal-btn"
-            aria-label="close modal">
-        </button>
-
-        <form action="#">
+        </div> <!--close header container-->   
             
-            <div class="input-container">
-
-                <label for="username">Username</label>
-                <input type="text" placeholder="Enter Username" name="username" class="margin-bottom" required >
-
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter Password" name="password" class="margin-bottom" required>
-                
-            </div> <!--close input container-->
-
-
-            <div class="form-btns">
-                
-                <button type="submit" class="login margin-bottom">Login</button>
-                <button type="submit" class="signup margin-bottom">Sign Up</button>
-           
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" class="save-check"> Remember me
-                </label>
-
-            </div><!--close form btns-->    
-
-            <div class="xcl-container">
-                
-                <button type="button" class="cancel-btn" id="cancel-btn">Cancel</button>
-                <span class="forgot-pwd">Forgot <a href="#">password?</a></span>
+        <nav class="header-nav header-nav-hidden" id="header-nav">
             
-            </div><!--close xcl container-->
+            <ul class="header-ul">
+                <li class="header-crumb"><a href="index.html">home</a></li>
+                <li class="header-crumb"><a href="explore.html">explore</a></li>
+                <li class="header-crumb">
+                    <button class="signup-btn" id="signup-btn" data-modal="modal">sign up</button>
+                </li>
+                <li class="header-crumb">
+                    <button class="login-btn" id="login-btn" data-modal="modal">log in</button>
+                </li>
+            </ul>
 
-        </form>
-
-    </div> <!--close modal div-->
+        </nav>
     
-    <div class="modal-overlay hidden"></div>
+    </header>
 
-    </div>
+    <!-- ====== LOGIN / SIGNUP MODAL ====== -->
+
+    <div class="modal-overlay hidden" id="modal-overlay">
+        
+        <div class="login-modal hidden" id="login-modal">
+
+            <button 
+                class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
+                id="modal-close-btn"
+                aria-label="close modal">
+            </button>
+
+            <form class="modal-form" action="#">
+                
+                <div class="input-container">
+
+                    <label for="modal-username">Username</label>
+                    <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
+
+                    <label for="modal-password">Password</label>
+                    <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
+                    
+                </div> <!--close input container-->
+
+                <div class="form-btns">
+                    
+                    <button type="submit" class="login margin-bottom" id="modal-login-btn">Login</button>
+                    <button type="button" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
+            
+                    <label class="save-check-label">
+                        <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
+                    </label>
+
+                </div> <!--close form btns-->   
+                
+                <div class="modal-footer">
+
+                    <div class="xcl-container">
+                        
+                        <button type="button" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
+                        <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
+                    
+                    </div> <!--close xcl container-->
+
+                </div><!--close modal footer-->
+            </form>
+
+        </div>
+    
+  </div>
+
     <!--end form-->
 
     <main class="main-container">
@@ -202,7 +209,7 @@
                 </div>
 
                 <!--element for Google Map-->
-                <!-- <div class="map" id="map"></div> -->
+                <!-- <div class="explore-map" id="explore-map"></div> -->
                 <img src="assets/map.png" class="hidden placeholder explore-map" alt="">
             </div>
 
@@ -265,6 +272,12 @@
     </footer>
 
 <script src="index.js"></script>
+
+
+
+  
+
+  <!-- <script src="map.js"></script> -->
 
 </body>
 </html>

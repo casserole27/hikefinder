@@ -159,7 +159,7 @@ button:focus {
 .login-btn {
     display: inline-block;
     width: 150px;
-    font-family: inherit;;
+    font-family: inherit;
     font-size: var(--fs-s);
     text-align: center;
     text-transform: uppercase;

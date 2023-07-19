@@ -64,55 +64,51 @@
 
     <!-- ====== LOGIN / SIGNUP MODAL ====== -->
 
-    <div class="modal-overlay hidden" id="modal-overlay">
+    <dialog class="login-modal" id="login-modal">
+
+        <button 
+            class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
+            id="modal-close-btn"
+            aria-label="close modal">
+        </button>
+
+        <form class="modal-form" method="dialog">
+            
+            <div class="input-container">
+
+                <label for="modal-username">Username</label>
+                <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
+
+                <label for="modal-password">Password</label>
+                <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
+                
+            </div> <!--close input container-->
+
+            <div class="form-btns">
+                
+                <button value="login" class="login margin-bottom" id="modal-login-btn">Login</button>
+                <button value="signup" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
         
-        <div class="login-modal hidden" id="login-modal">
+                <label class="save-check-label">
+                    <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
+                </label>
 
-            <button 
-                class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
-                id="modal-close-btn"
-                aria-label="close modal">
-            </button>
-
-            <form class="modal-form" action="#">
-                
-                <div class="input-container">
-
-                    <label for="modal-username">Username</label>
-                    <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
-
-                    <label for="modal-password">Password</label>
-                    <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
-                    
-                </div> <!--close input container-->
-
-                <div class="form-btns">
-                    
-                    <button type="submit" class="login margin-bottom" id="modal-login-btn">Login</button>
-                    <button type="button" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
+            </div> <!--close form btns-->   
             
-                    <label class="save-check-label">
-                        <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
-                    </label>
+            <div class="modal-footer">
 
-                </div> <!--close form btns-->   
-                
-                <div class="modal-footer">
-
-                    <div class="xcl-container">
-                        
-                        <button type="button" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
-                        <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
+                <div class="xcl-container">
                     
-                    </div> <!--close xcl container-->
+                    <button formmethod="dialog" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
+                    <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
+                
+                </div> <!--close xcl container-->
 
-                </div><!--close modal footer-->
-            
-            </form>
+            </div><!--close modal footer-->
+        
+        </form>
 
-        </div><!--close login modal-->
-    
-    </div><!--close modal overlay-->
+    </dialog> <!--close login modal div-->
 
     <!--end form-->
 
@@ -232,41 +228,41 @@
 
     <!-- ====== SITE INFO / GRID ====== -->
     
-            <section class="site-info-container">
+    <section class="site-info-container">
 
-                <article class="info-item">
-                    
-                    <img src="assets/bell-solid.svg" class="info-icon" alt="">
-                    <h3 class="info-title">Sign up for notifications</h3>
-                    <p class="info-description">
-                        <button class="info-link" data-modal="modal">Sign up</button> to get conditions, alerts, information on pop-up events and interesting stories.
-                    </p>
-                
-                </article>
+        <article class="info-item">
+            
+            <img src="assets/bell-solid.svg" class="info-icon" alt="">
+            <h3 class="info-title">Sign up for notifications</h3>
+            <p class="info-description">
+                <button class="info-link" data-modal="modal">Sign up</button> to get conditions, alerts, information on pop-up events and interesting stories.
+            </p>
+        
+        </article>
 
-                <article class="info-item">
+        <article class="info-item">
 
-                    <img src="assets/location-solid.svg" class="info-icon" alt="">
-                    <h3 class="info-title">Get the HikeFinder App</h3>
-                    <p class="info-description">
-                        <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
-                    </p>
+            <img src="assets/location-solid.svg" class="info-icon" alt="">
+            <h3 class="info-title">Get the HikeFinder App</h3>
+            <p class="info-description">
+                <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
+            </p>
 
-                </article>
+        </article>
 
-                <article class="info-item">
+        <article class="info-item">
 
-                    <img src="assets/share-solid.png" class="info-icon" alt="">
-                    <h3 class="info-title">Share Trails</h3>
-                    <p class="info-description">
-                        <button class="info-link" data-modal="modal">Share your hiking adventures</button> with the community and keep a record of your travels.
-                    </p>
+            <img src="assets/share-solid.png" class="info-icon" alt="">
+            <h3 class="info-title">Share Trails</h3>
+            <p class="info-description">
+                <button class="info-link" data-modal="modal">Share your hiking adventures</button> with the community and keep a record of your travels.
+            </p>
 
-                </article>
+        </article>
 
-            </section>
+    </section>
 
-    </main>
+</main>
 
     <!-- ====== FOOTER ====== -->
 

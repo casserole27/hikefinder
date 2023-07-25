@@ -16,8 +16,8 @@
 
 ### Overview
 
-Scrimba M6 bootcamp project- HikeFinder Website
-[Scrim](https://scrimba.com/scrim/cBR2mvuW)
+- Scrimba M6 bootcamp project- HikeFinder Website
+- [Scrim](https://scrimba.com/scrim/cBR2mvuW)
 
 
 ### The challenge
@@ -35,11 +35,47 @@ Stretch Goals
 - embed a Google map on the "explore" page
 - add new pages - more info, links for resources
 
+Personal stretch goal
+- build accessible pop-up login and sign up modal
+
 [Figma file](https://www.figma.com/file/YEOgujM7wAhrnG1MqVS6ud/Solo-Project%3A-HikeFinder-(Copy)?t=WzpPj259eh1evWth-0)
 
 ### Screenshot
 
-![screenshot](#)
+<h2>Home Page - Desktop</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-home-desktop.png)
+
+<h2>Explore Page - Desktop</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-explore-desktop.png)
+
+<h2>Login and Signup Modal - Desktop</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-modal-desktop.png)
+
+<h2>Home Page - Mobile</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-home-mobile.png)
+
+<h2>Explore Page - Mobile</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-explore-mobile.png)
+
+<h2>Hamburger Menu - Mobile</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-hamburger-mobile.png)
+
+<h2>Login and Signup Modal - Mobile</h2>
+<hr>
+
+![screenshot](assets/screenshots/HikeFinder-modal-mobile.png)
 
 ### Links
 

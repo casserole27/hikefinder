@@ -37,22 +37,34 @@ Date: April 2023
 
 .header-crumb {
     font-size: var(--fs-s);
-    text-align: right;
-    text-transform: uppercase;
     padding: .75em 1em;
     margin-bottom: .5em;
+}
+
+.home-link,
+.explore-link,
+.signup-btn,
+.login-btn {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .75em 1em;
+    border: 1px solid var(--green);
+    border-radius: var(--br-soft);
+}
+
+@media (min-width: 1000px) {
+    .home-link,
+    .explore-link {
+        border: none;
+    }
 }
 
 .signup-btn,
 .login-btn {
     display: inline-block;
-    width: 150px;
     font-family: inherit;
     font-size: var(--fs-s);
-    text-align: center;
-    text-transform: uppercase;
-    padding: .75em 1em;
-    border-radius: var(--br-soft);
 }
 
 nav a:visited {
@@ -125,7 +137,7 @@ nav a:visited {
 
 .search-form {
     width: 100%;
-    padding: 1rem;
+    padding: var(--utility-padding);
     position: absolute;
     bottom: 1rem;
     margin: 0 auto;
@@ -151,7 +163,6 @@ nav a:visited {
     font-weight: 700;
     color: var(--gray);
     opacity: .30;
-    /* padding: 1rem; */
 }
 
 .search-icon {
@@ -206,7 +217,7 @@ nav a:visited {
 
 .learn-link {
     display: inline-block;
-    max-width: 200px;
+    width: 100%;
     font-size: var(--fs-xs);
     text-align: center;
     background-color: var(--green);

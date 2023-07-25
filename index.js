@@ -74,6 +74,21 @@ function hideModal() {
     focusedElBeforeModal.focus();
 };
 
+//syntax to click outside of modal to close, but not the modal itself
+loginModal.addEventListener("click", e => {
+    //getBoundingClientRect() returns info about the size of an element and its position relative to the viewport
+    const dialogDimensions = loginModal.getBoundingClientRect()
+    //if the d
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      loginModal.close()
+    }
+  })
+
 function clearModal() {
     modalUsername.value = '';
     modalPw.value = '';
@@ -90,7 +105,7 @@ document.addEventListener('click', e => {
     } else if (e.target.dataset.modal) {
         showModal();
     
-    } else if (e.target.id === 'modal-close-btn' || (e.target == loginModal) || (e.target.id === 'modal-login-btn') || (e.target.id === 'modal-signup-btn')) {
+    } else if (e.target.id === 'modal-close-btn' || /*(e.target == loginModal) ||*/ (e.target.id === 'modal-login-btn') || (e.target.id === 'modal-signup-btn')) {
         hideModal();
     }    
     // formmethod = "dialog" on Cancel form button in HTML automatically clears the form

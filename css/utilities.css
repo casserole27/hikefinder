@@ -86,7 +86,6 @@ input:hover {
 }
 
 a:focus {
-    padding: .25em;
     border-radius: var(--br-soft);
 }
 

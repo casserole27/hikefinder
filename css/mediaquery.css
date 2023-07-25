@@ -29,10 +29,6 @@
         width: 150px;
     }    
 
-    .nav-btn {
-        display: none;
-    }
-
     .header-ul {
         display: flex;
         align-items: center;

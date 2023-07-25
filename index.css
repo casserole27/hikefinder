@@ -7,7 +7,7 @@
 /*
 Author: Cassie Lewis
 https://clewisdev.com
-Date: April 2023
+Date: July 2023
 */
 
 
@@ -27,12 +27,6 @@ Date: April 2023
 
 .header-nav-hidden {
     display: none;
-}
-
-@media (min-width: 1000px) {
-    .header-nav-hidden {
-        display: block;
-    }
 }
 
 .header-crumb {
@@ -56,7 +50,8 @@ Date: April 2023
 @media (min-width: 1000px) {
     .home-link,
     .explore-link {
-        border: none;
+        border: none; /* couldn't get this to work in import files */
+        padding: .5em;
     }
 }
 
@@ -100,9 +95,20 @@ nav a:visited {
     }
 }
 
+@media (min-width: 1000px) { /* displays header navigation @1000px */
+
+    .nav-btn {
+        display: none;
+    }
+    
+    .header-nav-hidden {
+        display: block;
+    }
+}
+
 /*====== HERO SECTION ======*/
 
-.hero-container {
+.hero-container { /* couldn't get shorthand background property to work */
     background-image: url(assets/hero-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;

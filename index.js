@@ -10,7 +10,6 @@ let focusedElBeforeModal;
 const loginModal = document.getElementById('login-modal')
 const modalUsername = document.getElementById('modal-username')
 const modalPw = document.getElementById('modal-password')
-const modalRememberCheckbox = document.getElementById('save-check');
 const closeModalBtn = document.getElementById('modal-close-btn')
 
 
@@ -105,7 +104,7 @@ document.addEventListener('click', e => {
     } else if (e.target.dataset.modal) {
         showModal();
     
-    } else if (e.target.id === 'modal-close-btn' || /*(e.target == loginModal) ||*/ (e.target.id === 'modal-login-btn') || (e.target.id === 'modal-signup-btn')) {
+    } else if (e.target.id === 'modal-close-btn' || (e.target.id === 'modal-login-btn') || (e.target.id === 'modal-signup-btn')) {
         hideModal();
     }    
     // formmethod = "dialog" on Cancel form button in HTML automatically clears the form

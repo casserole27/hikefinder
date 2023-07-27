@@ -116,7 +116,9 @@ Personal stretch goal
   - CSS ::backdrop pseudo-element
   - using JavaScript methods that can be associated with dialog element, .showModal() and .close()
   - using JavaScript to trap keyboard focus
--[Loom walk-thru](https://www.loom.com/share/10fffbd06bd5470fbd8235be4e708d72?sid=a50f844d-82f2-4c33-875f-ec3d375d6d67)  
+
+<h2><a href="https://www.loom.com/share/10fffbd06bd5470fbd8235be4e708d72?sid=a50f844d-82f2-4c33-875f-ec3d375d6d67">Loom walk-thru: building an accessible pop-up modal</a></h2>
+<hr>  
 
 - Review of CSS grid syntax, and I tried some of the syntax I had not tried before.
 - Grid-auto-flow works with how items are placed on the implicit grid

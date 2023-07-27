@@ -156,7 +156,7 @@
 }
 
 /*====== DARK MODE PREFERENCE ======*/
-/* 
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #3a3a3a;
@@ -178,4 +178,4 @@
     .explore-description {
         color: lightgray;
     }
-} */
+}

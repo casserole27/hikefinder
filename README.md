@@ -79,9 +79,9 @@ Personal stretch goal
 
 ### Links
 
-[Scrim](https://scrimba.com/scrim/co6db4a14b1c7ed158787626b)
-[Github](https://github.com/casserole27/hikefinder)
-[Live Site](#)
+-[Scrim](https://scrimba.com/scrim/co6db4a14b1c7ed158787626b)
+-[Github](https://github.com/casserole27/hikefinder)
+-[Live Site](https://www.clewisdev.com/hikefinder/)
 
 ## My process
 
@@ -99,12 +99,76 @@ Personal stretch goal
 
 ### Built with
 
+- semantic HTML5
 - CSS custom properties
+- CSS grid
+- CSS flexbox
+- Mobile-first design
 - Responsive Web Design
 
 ### What I learned
 
+- Working with a larger CSS file and attempting to separate it using @import
+
+- Building an accessible login and signup pop-up modal
+  - responsive design
+  - HTML dialog element
+  - CSS ::backdrop pseudo-element
+  - using JavaScript methods that can be associated with dialog element, .showModal() and .close()
+  - using JavaScript to trap keyboard focus
+-[Loom walk-thru](https://www.loom.com/share/10fffbd06bd5470fbd8235be4e708d72?sid=a50f844d-82f2-4c33-875f-ec3d375d6d67)  
+
+- Review of CSS grid syntax, and I tried some of the syntax I had not tried before.
+- Grid-auto-flow works with how items are placed on the implicit grid
+
+```css
+.site-info-container {
+    background-color: #ecebeb;
+    padding: 2.25em 4em;
+    text-align: center;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2.5em;
+}
+
+@media (min-width: 800px) {
+    
+    .site-info-container {
+        padding-top: 5em;
+        padding-bottom: 5em;
+        grid-auto-flow: column;
+    }
+
+    .info-description {
+        max-width: 24rem;
+        margin: 0 auto;
+    }
+}
+```
+
+- CSS backdrop filter
+- This creates the black box behind the hero text so it doesn't have to be an additional element on the grid.
+
+```css
+
+.hero-text {
+    max-width: 750px;
+    backdrop-filter: brightness(50%);
+    padding: 2.25em 1.5em;
+}
+```
+
+- Placement of pseudo-elements on the grid.
+  - I didn't end up using this styling, but it is useful to know.
+
+
 ### Continued development
+
+- Importing CSS files, the styling doesn't work sometimes. Why?
+
+- Login form, additional functionality: "remember me" checkbox, etc
+
+[Adding Google Maps to websites](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
 
 
 ### Useful resources
@@ -115,11 +179,9 @@ Personal stretch goal
 
 [Kevin Powell - Pseudo-elements positioning on grid](https://www.youtube.com/watch?v=CcoPk7udIpA&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998&index=8)
 
-[Adding Google Maps to websites](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
-
 - HTML dialog element
-[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
-[Web Dev Simplified](https://blog.webdevsimplified.com/2023-04/html-dialog/)
+-[MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+-[Web Dev Simplified](https://blog.webdevsimplified.com/2023-04/html-dialog/)
 
 
 ## Author
@@ -129,6 +191,10 @@ Personal stretch goal
 
 
 ## Acknowledgments
+
+-Kevin Powell
+-[Web Dev Simplified](https://blog.webdevsimplified.com)
+-Brett James for the introduction to the HTML dialog element
 
 
 

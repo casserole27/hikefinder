@@ -1,4 +1,3 @@
-
  ## Table of contents
 
 - [Overview](#overview)
@@ -18,6 +17,9 @@
 
 - Scrimba M6 bootcamp project- HikeFinder Website
 - [Scrim](https://scrimba.com/scrim/cBR2mvuW)
+
+<h2><a href="https://www.loom.com/share/aa9f0aa0be88452aa90c339253cd4e0b?sid=65d6499a-8824-41d8-b813-8a23884d8c81">Loom HikeFinder project walk-thru</a></h2>
+<hr>
 
 
 ### The challenge

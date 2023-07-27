@@ -121,6 +121,8 @@ Personal stretch goal
 <hr>  
 
 - Review of CSS grid syntax, and I tried some of the syntax I had not tried before.
+  - Home page:
+    
 - Grid-auto-flow works with how items are placed on the implicit grid
 
 ```css

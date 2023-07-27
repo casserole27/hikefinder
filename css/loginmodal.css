@@ -98,6 +98,7 @@ form button {
 }
 
 .pwd-link {
+    color: var(--pale-yellow);
     margin-left: .1em;
 }
 

@@ -4,13 +4,14 @@
     
     /*COLORS*/
     --white: #fff;
-    --off-white: #FAFAFA;
     --black: #000;
     --dark-gray: #4E4E4E;
     --gray: #565656;
     --light-gray: lightgray;
-    --green: #638A5C;
+    /* --green: #638A5C; */
+    --green: #445F3F;
     --pale-yellow: #ECE480;
+  
  
     /*BORDER RADIUS*/
     --br-soft: .25rem;
@@ -29,6 +30,17 @@
     --info-icon-width: 30px;
     --info-icon-height: 30px;
     --star-width: 1rem;
+
+    /*FOR DARKMODE*/
+    --bg: #FAFAFA;
+    --heading: #4E4E4E;
+    --info-bg: #ecebeb;
+    --visited: darkblue;
+    --text-one: black;
+    --text-two: #565656;
+    --icon: #4E4E4E;
+    --nav-bg: lightgray;
+    --info-link: #445F3F;
 }
 
 /****** MARGIN AND PADDING RESET ******/
@@ -42,7 +54,7 @@
 /******* GLOBAL STYLES *******/
 
 body {
-    background-color: var(--off-white);
+    background-color: var(--bg);
     font-family: 'Inter', sans-serif;
     min-width: 320px;
     margin: 0 auto;

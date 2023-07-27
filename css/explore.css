@@ -1,7 +1,7 @@
 /*====== EXPLORE PAGE ======*/
 
 .explore-subtitle {
-    color: var(--dark-gray);
+    color: var(--heading);
     font-size: var(--fs-m);
     margin-bottom: 1em;
 }
@@ -13,6 +13,11 @@
 .explore-rating {
     font-size:  var(--fs-xs);
     margin-bottom: 2em;
+}
+
+.explore-title,
+.explore-rating {
+    color: var(--text-one);
 }
 
 .explore-img {
@@ -27,6 +32,7 @@
 }
 
 .explore-description {
+    color: var(--text-two);
     margin-bottom: 2em;
 }
 
@@ -48,7 +54,6 @@
     }
 
     .explore-subtitle {
-        font-size: var(--fs-l);
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
@@ -90,7 +95,6 @@
 
     .explore-description {
         font-size: 1.675rem;
-        color: var(--dark-gray);
         line-height: 150%;
         padding-bottom: 3rem;
         grid-row: 3;

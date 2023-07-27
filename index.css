@@ -15,6 +15,9 @@ Date: July 2023
 
 .header-logo {
     width: var(--header-logo);
+    background-color: #FAFAFA;;
+    padding: .5em;
+    border-radius: 5px;
 }
 
 .header-container {
@@ -63,7 +66,7 @@ Date: July 2023
 }
 
 nav a:visited {
-    color: darkblue;
+    color: var(--visited)
 }
 
 .nav-btn {
@@ -88,7 +91,7 @@ nav a:visited {
 @media (max-width: 999px) {
     
     .header-nav {
-        background-color: var(--light-gray);
+        background-color: var(--nav-bg);
         padding: .5em 0;
         margin-bottom: 1em;
         border-radius: var(--br-soft);
@@ -198,7 +201,7 @@ nav a:visited {
 } 
 
 .hikes-heading {
-    color: var(--dark-gray);
+    color: var(--heading);
 }
 
 .hikes-heading,
@@ -216,8 +219,13 @@ nav a:visited {
     margin-bottom: 1em;
 }
 
+.hikes-title,
+.hikes-subtitle {
+    color: var(--text-one);
+}
+
 .hikes-description {
-    color: var(--gray);
+    color: var(--text-two);
     margin-bottom: 1.25em;
 }
 
@@ -243,7 +251,7 @@ nav a:visited {
 /*====== SITE INFO ======*/
 
 .site-info-container {
-    background-color: #ecebeb;
+    background-color: var(--info-bg);
     padding: 2.25em 4em;
     text-align: center;
     display: grid;
@@ -273,12 +281,17 @@ nav a:visited {
     width: var(--info-icon-width);
     height: var(--info-icon-height);
     display: inline-block;
-    color: var(--dark-gray);
+    color: var(--icon);
     margin-bottom: 1em;
 }
 
 .info-title {
     margin-bottom: 1em;
+}
+
+.info-title,
+.info-description {
+    color: var(--text-two);
 }
 
 .info-title,
@@ -289,7 +302,7 @@ nav a:visited {
 
 .info-link {
     font-family: inherit;
-    color: var(--green);
+    color: var(--info-link);
     font-weight: 700;
 }
 
@@ -333,7 +346,7 @@ footer {
 }
 
 .copyright-info {
-    font-size: .5em;
+    font-size: .75rem;
     text-align: center;
     color: var(--light-gray);
     padding-bottom: 2em;

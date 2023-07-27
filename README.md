@@ -121,8 +121,45 @@ Personal stretch goal
 <hr>  
 
 - Review of CSS grid syntax, and I tried some of the syntax I had not tried before.
-  - Home page:
+- Site built mobile-first, grids enact @800 and 1000px media query
+- Responsiveness takes care of the sizing so I'm not introducing a lot of breakpoints
+- Hero section and home page:
+```css
+    .grid-container {
+        margin-bottom: 4rem;
+        
+        display: grid;
+        grid-template-rows: repeat(5, min-content);
+        grid-template-columns: 1fr .5fr 1fr;
+        gap: 1em;
+    }
+
+    .hero-container {
+        grid-row: 1;
+        grid-column: 1 / -1;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+```
+- Site info section, both pages:
+
+```css
+@media (min-width: 800px) {
     
+    .site-info-container {
+        padding-top: 5em;
+        padding-bottom: 5em;
+        grid-auto-flow: column;
+    }
+
+    .info-description {
+        max-width: 24rem;
+        margin: 0 auto;
+    }
+}
+
+```
 - Grid-auto-flow works with how items are placed on the implicit grid
 
 ```css
@@ -149,7 +186,6 @@ Personal stretch goal
     }
 }
 ```
-
 - CSS backdrop filter
 - This creates the black box behind the hero text so it doesn't have to be an additional element on the grid.
 
@@ -160,6 +196,18 @@ Personal stretch goal
     backdrop-filter: brightness(50%);
     padding: 2.25em 1.5em;
 }
+```
+
+- Explore page: grid within flex to handle map sizing
+```css
+    .explore-one,
+    .explore-two,
+    .explore-three {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, min-content);
+    }
+
 ```
 
 - Placement of pseudo-elements on the grid.

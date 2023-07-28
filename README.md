@@ -81,9 +81,9 @@ Personal stretch goal
 
 ### Links
 
--[Scrim](https://scrimba.com/scrim/co6db4a14b1c7ed158787626b)
--[Github](https://github.com/casserole27/hikefinder)
--[Live Site](https://www.clewisdev.com/hikefinder/)
+- [Scrim](https://scrimba.com/scrim/co6db4a14b1c7ed158787626b)
+- [Github](https://github.com/casserole27/hikefinder)
+- [Live Site](https://www.clewisdev.com/hikefinder/)
 
 ## My process
 
@@ -102,6 +102,7 @@ Personal stretch goal
 ### Built with
 
 - semantic HTML5
+- Accessibility
 - CSS custom properties
 - CSS grid
 - CSS flexbox

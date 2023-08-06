@@ -2,7 +2,7 @@
 
 .login-modal {
     max-width: 800px;
-    background-color: transparent;
+    background-color: var(--green);
     color: var(--white);
     padding: 1rem;
     margin: 0 auto;

@@ -223,7 +223,52 @@ Personal stretch goal
 
 - Login form, additional functionality: "remember me" checkbox, etc
 
-[Adding Google Maps to websites](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
+- [Adding Google Maps to websites](https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript)
+
+- FROM CODE REVIEW *** What could be improved
+-[Code review scrim](https://scrimba.com/scrim/cob374eff8084134a1ef0c997)
+
+- ** Structure
+- [] place index.css in css folder
+- [] place @media (prefers-color-scheme: dark) in either utilities or index; 
+- [] some MQs are not placed in mediaquery.css
+
+
+- ** UX
+- [x] cancel button on signup form does not work
+- [x] target="_blank" on outgoing links (UX)
+- [x] Currently, signup and login buttons seem to take the user to the same page
+
+- ** HTML
+- [x] avoid unnecessary spaces in the markup: save every byte you can!
+- [x] Links do not have descriptive text (all the "learn more") => not good for SEO
+- [x] Document does not have a meta description => Add a <meta name=description> element to the <head> of each of your pages: <meta name="description" content="Put your description here.">
+- [x] currently, there's no max-width on your app, causing undue stretch on your layou on very wide screens =>
+ modify your .padding class to include max-width + margin: 0 auto, and place it in the right places. Note that it is usually called .container, and is first introduced in M4 I believe.
+ 
+- ** CSS
+- [x] :root CSS variables: more efficient to use semantic variables such as color-main, color-secondary, color-accent etc. which makes it easier to switch over to dark mode 
+- [x] :root should be declared only once, for convenience and maintenance (you redefine some in MQ)
+- [x] nav-btn is black on dark mode
+- [x] adding height: 20px on nav-btn improved the outline effect BUT weird behavior on dark more, which I think is conected to the icon not having a color (so, adding color: var(--icon);)
+- [x] learn more buttons (.learn-link) on mobile shouldn't take 100% width (Figma)
+- [x] markup and (button/a)hover behavior is not consistent on site info links. Intended?
+- [x] layout of explore page: just after your MQ breakpoint, the image is almost invisible; consider resizing map img to width: 50%
+- [x] grid-template-rows seem to have no effect (.grid-container, .explore-*)
+- [x] consider adding bg-color on modal for improved legibility (I'd use your var(--green))
+- [x] media query breakpoints are typically 768px 1024px and 1280px
+- [x] tendency to multiply classes where one would have sufficed. e.g.
+- .home-link,
+- .explore-link,
+- .signup-btn,
+- .login-btn 
+- => nav--link
+
+- ** Resources: 
+- I love this Kevin Powell video: https://www.youtube.com/watch?v=RctP49SwyT0 - taught me a lot about building color schemes and using CSS variables towards that, as well as scalable typography
+
+- ** Challenge
+- If you're interested in optimizing: download the lighthouse plugin and run a diagnostic. You'll see your site needs Performance improvements mostly linked to images. It's something that is outside the scope of the Scrimba front-end course.
 
 
 ### Useful resources

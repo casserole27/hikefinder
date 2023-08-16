@@ -16,11 +16,8 @@ dialog::backdrop {
 }
 
 .close-modal-btn {
-    display: block;
+display: block;
     color: var(--white);
-}
-
-.close-modal-btn {
     margin-top: 1rem;
     margin-left: auto;
 }

@@ -233,11 +233,8 @@ Personal stretch goal
 - [] place @media (prefers-color-scheme: dark) in either utilities or index; 
 - [] some MQs are not placed in mediaquery.css
 
-
 - ** UX
-- [x] cancel button on signup form does not work
-- [x] target="_blank" on outgoing links (UX)
-- [x] Currently, signup and login buttons seem to take the user to the same page
+- [] target="_blank" on outgoing links (UX)
 
 - ** HTML
 - [x] avoid unnecessary spaces in the markup: save every byte you can!
@@ -247,14 +244,11 @@ Personal stretch goal
  modify your .padding class to include max-width + margin: 0 auto, and place it in the right places. Note that it is usually called .container, and is first introduced in M4 I believe.
  
 - ** CSS
-- [x] :root CSS variables: more efficient to use semantic variables such as color-main, color-secondary, color-accent etc. which makes it easier to switch over to dark mode 
-- [x] :root should be declared only once, for convenience and maintenance (you redefine some in MQ)
-- [x] nav-btn is black on dark mode
+- [] :root CSS variables: more efficient to use semantic variables such as color-main, color-secondary, color-accent etc. which makes it easier to switch over to dark mode 
+- [] :root should be declared only once, for convenience and maintenance (you redefine some in MQ)
+- [] nav-btn is black on dark mode
 - [x] adding height: 20px on nav-btn improved the outline effect BUT weird behavior on dark more, which I think is conected to the icon not having a color (so, adding color: var(--icon);)
-- [x] learn more buttons (.learn-link) on mobile shouldn't take 100% width (Figma)
-- [x] markup and (button/a)hover behavior is not consistent on site info links. Intended?
-- [x] layout of explore page: just after your MQ breakpoint, the image is almost invisible; consider resizing map img to width: 50%
-- [x] grid-template-rows seem to have no effect (.grid-container, .explore-*)
+- [] layout of explore page: just after your MQ breakpoint, the image is almost invisible; consider resizing map img to width: 50%
 - [x] consider adding bg-color on modal for improved legibility (I'd use your var(--green))
 - [x] media query breakpoints are typically 768px 1024px and 1280px
 - [x] tendency to multiply classes where one would have sufficed. e.g.

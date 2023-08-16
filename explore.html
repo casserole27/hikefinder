@@ -29,24 +29,17 @@
  -->
 
  <body>
-
     <!-- ====== HEADER MENU ====== -->
-
-    <header class="padding">
-        
+    <header class="padding">      
         <div class="header-container">
-
             <img src="assets/logo.svg" class="header-logo" alt="HikeFinder">
             <button 
                 class="fa-solid fa-bars fa-lg nav-btn" 
                 id="nav-btn"
                 aria-label="navigation menu">
             </button>
-
         </div> <!--close header container-->   
-            
         <nav class="header-nav header-nav-hidden" id="header-nav">
-            
             <ul class="header-ul">
                 <li class="header-crumb"><a href="index.html" class="home-link">home</a></li>
                 <li class="header-crumb"><a href="explore.html" class="explore-link">explore</a></li>
@@ -57,89 +50,55 @@
                     <button class="login-btn" id="login-btn" data-modal="modal">log in</button>
                 </li>
             </ul>
-
-        </nav>
-    
+       </nav>
     </header> 
-
     <!-- ====== LOGIN / SIGNUP MODAL ====== -->
-
-    <dialog class="login-modal" id="login-modal">
-
-        <button 
-            class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
-            id="modal-close-btn"
-            aria-label="close modal">
-        </button>
-
-        <form class="modal-form" method="dialog">
-            
-            <div class="input-container">
-
-                <label for="modal-username">Username</label>
-                <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
-
-                <label for="modal-password">Password</label>
-                <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
-                
-            </div> <!--close input container-->
-
-            <div class="form-btns">
-                
-                <button value="login" class="login margin-bottom" id="modal-login-btn">Login</button>
-                <button value="signup" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
-        
-                <label class="save-check-label">
-                    <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
-                </label>
-
-            </div> <!--close form btns-->   
-            
-            <div class="modal-footer">
-
-                <div class="xcl-container">
-                    
-                    <button formmethod="dialog" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
-                    <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
-                
-                </div> <!--close xcl container-->
-
-            </div><!--close modal footer-->
-        
-        </form>
-
-    </dialog> <!--close login modal div-->
-
+        <dialog class="login-modal" id="login-modal">
+            <button 
+                class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
+                id="modal-close-btn"
+                aria-label="close modal">
+            </button>
+            <form class="modal-form" method="dialog">
+                <div class="input-container">
+                    <label for="modal-username">Username</label>
+                    <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
+                    <label for="modal-password">Password</label>
+                    <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
+                </div> <!--close input container-->
+                <div class="form-btns">
+                    <button value="login" class="login margin-bottom" id="modal-login-btn">Login</button>
+                    <button value="signup" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
+                    <label class="save-check-label">
+                        <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
+                    </label>
+                </div> <!--close form btns-->   
+                <div class="modal-footer">
+                    <div class="xcl-container">                       
+                        <button formmethod="dialog" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
+                        <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
+                    </div> <!--close xcl container-->
+                </div><!--close modal footer-->
+            </form>
+        </dialog> <!--close login modal div-->    
     <!--end form-->
-
     <!-- ====== HERO SECTION ====== -->
-
     <main>
-        
         <section>
-
                 <div class="hero-container">
-                
                     <div class="hero-text">    
-
                         <h1 class="hero-title">Find Your Next 
                             <span class="hero-adventure">Adventure</span>
                         </h1>
-
                         <p class="hero-description">
                             Your next hiking adventure awaits.
                             Get on the trail with detailed maps and updates
                             shared by hikers like you.
                         </p>
-
                     </div><!--close hero text-->
-
                     <div class="search-form">    
-
                         <form action="#">
-
                             <div class="search-form-container">
-                                
                                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                 <input 
                                     type="search" 
@@ -154,28 +113,17 @@
                                     id="city-search-btn">
                                     Search
                                 </button>    
-                            
                             </div><!--close search form container-->
-                        
                         </form>
-                
                     </div><!--close search form-->
-
                 </div><!--close hero-container-->
-            
             </section>    
-
         <!-- ====== EXPLORE HIKES / GRID ====== -->
-
             <section class="explore-container">
-
                 <h2 class="explore-subtitle padding">Explore Curated Trails Near</h2>
-
                 <div class="explore-flex">
-
                     <div class="article-flex">    
                         <article class="explore-one padding">
-                        
                             <img src="assets/explore-trail-1.png" class="explore-img" alt="sunlight shines through pine forest trail surrounded by greenery">    
                             <h3 class="explore-title">Tryon Creek State Area</h3>
                             <p class="explore-rating">
@@ -185,11 +133,8 @@
                             <p class="explore-description border-bottom">
                                 670-acre forested area along a ravine with well-maintained trails for hikers, horses & leashed dogs.
                             </p>
-                        
                         </article>
-
                         <article class="explore-two padding">
-
                             <img src="assets/explore-trail-2.png" class="explore-img" alt="blue sky with tall mountain, white clouds, and forest surrounding a blue lake">
                             <h3 class="explore-title">Marquam Nature Park</h3>
                             <p class="explore-rating">
@@ -199,11 +144,8 @@
                             <p class="explore-description border-bottom">
                                 193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.
                             </p>
-
                         </article>
-
                         <article class="explore-three padding">
-
                             <img src="assets/explore-trail-1.png" class="explore-img" alt="sunlight shines through pine forest trail surrounded by greenery">
                             <h3 class="explore-title">Wildwood Trail Area</h3>
                             <p class="explore-rating">
@@ -213,63 +155,41 @@
                             <p class="explore-description">
                                 The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.                
                             </p>
-                                
                         </article>
-                    
                     </div><!--close article flex-->
-
                     <!--FOR LATER - element for Google Map-->
                     <!-- <div class="explore-map" id="explore-map"></div> -->
                     <img src="assets/map.png" class="hidden explore-map" alt="">
-                
                 </div><!--close explore flex-->
-
             </section>
-
     <!-- ====== SITE INFO / GRID ====== -->
-    
     <section class="site-info-container">
-
         <article class="info-item">
-            
             <img src="assets/bell-solid.svg" class="info-icon" alt="">
             <h3 class="info-title">Sign up for notifications</h3>
             <p class="info-description">
                 <button class="info-link" data-modal="modal">Sign up</button> to get conditions, alerts, information on pop-up events and interesting stories.
             </p>
-        
         </article>
-
         <article class="info-item">
-
             <img src="assets/location-solid.svg" class="info-icon" alt="">
             <h3 class="info-title">Get the HikeFinder App</h3>
             <p class="info-description">
                 <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
             </p>
-
         </article>
-
         <article class="info-item">
-
             <img src="assets/share-solid.png" class="info-icon" alt="">
             <h3 class="info-title">Share Trails</h3>
             <p class="info-description">
                 <button class="info-link" data-modal="modal">Share your hiking adventures</button> with the community and keep a record of your travels.
             </p>
-
         </article>
-
     </section>
-
 </main>
-
     <!-- ====== FOOTER ====== -->
-
     <footer>
-    
         <nav>
-            
             <ul class="footer-nav">
                 <li class="footer-crumb"><a href="index.html">home</a></li>
                 <li class="footer-crumb"><a href="explore.html">explore</a></li>
@@ -280,17 +200,12 @@
                     <button class="footer-login-btn" id="footer-login-btn" data-modal="modal">log in</button>
                 </li>
             </ul>
-
         </nav>
-
         <div class="footer-text">
             <img src="assets/logo-footer.png" alt="HikeFinder" class="footer-logo">
             <p class="copyright-info">copyright 2022 HikeFinder</p>
         </div>    
-
     </footer>
-
 <script src="index.js"></script>
-
-</body>
+/</body>
 </html>

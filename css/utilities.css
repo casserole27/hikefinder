@@ -32,6 +32,7 @@
     --star-width: 1rem;
 
     /*FOR DARKMODE*/
+    --body-bg: rgb(241, 241, 241)
     --bg: #FAFAFA;
     --heading: #4E4E4E;
     --info-bg: #ecebeb;
@@ -54,10 +55,17 @@
 /******* GLOBAL STYLES *******/
 
 body {
-    background-color: var(--bg);
+    background-color: var(--body-bg);
     font-family: 'Inter', sans-serif;
+    max-width: 1440px;
     min-width: 320px;
     margin: 0 auto;
+    /* border: 2px solid gray; */
+
+}
+
+.body-container {
+    background-color: var(--bg);
 }
 
 button {

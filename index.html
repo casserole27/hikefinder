@@ -28,24 +28,18 @@
  -->
 
  <body>
-
+    <div class="body-container">
     <!-- ====== HEADER MENU ====== -->
-
-    <header class="padding">
-        
+    <header class="padding">      
         <div class="header-container">
-
             <img src="assets/logo.svg" class="header-logo" alt="HikeFinder">
             <button 
                 class="fa-solid fa-bars fa-lg nav-btn" 
                 id="nav-btn"
                 aria-label="navigation menu">
             </button>
-
         </div> <!--close header container-->   
-            
         <nav class="header-nav header-nav-hidden" id="header-nav">
-            
             <ul class="header-ul">
                 <li class="header-crumb"><a href="index.html" class="home-link">home</a></li>
                 <li class="header-crumb"><a href="explore.html" class="explore-link">explore</a></li>
@@ -56,89 +50,55 @@
                     <button class="login-btn" id="login-btn" data-modal="modal">log in</button>
                 </li>
             </ul>
-
-        </nav>
-    
+       </nav>
     </header> 
-
     <!-- ====== LOGIN / SIGNUP MODAL ====== -->
-
         <dialog class="login-modal" id="login-modal">
-
             <button 
                 class="close-modal-btn fa-solid fa-circle-xmark fa-xl margin-bottom" 
                 id="modal-close-btn"
                 aria-label="close modal">
             </button>
-
             <form class="modal-form" method="dialog">
-                
                 <div class="input-container">
-
                     <label for="modal-username">Username</label>
                     <input type="text" placeholder="Enter Username" id="modal-username" class="margin-bottom" required >
-
                     <label for="modal-password">Password</label>
                     <input type="password" placeholder="Enter Password" id="modal-password" class="margin-bottom" required>
-                    
                 </div> <!--close input container-->
-
                 <div class="form-btns">
-                    
                     <button value="login" class="login margin-bottom" id="modal-login-btn">Login</button>
                     <button value="signup" class="signup margin-bottom" id="modal-signup-btn">Sign Up</button>
-            
                     <label class="save-check-label">
                         <input type="checkbox" checked="checked" name="remember" class="save-check" id="save-check"> Remember me <!--local storage?-->
                     </label>
-
                 </div> <!--close form btns-->   
-                
                 <div class="modal-footer">
-
-                    <div class="xcl-container">
-                        
+                    <div class="xcl-container">                       
                         <button formmethod="dialog" class="cancel-btn" id="modal-cancel-btn">Cancel</button>
                         <span class="forgot-pwd">Forgot <a href="#" class="pwd-link">password?</a></span>
-                    
                     </div> <!--close xcl container-->
-
                 </div><!--close modal footer-->
-            
             </form>
-
-        </dialog> <!--close login modal div-->
-    
+        </dialog> <!--close login modal div-->    
     <!--end form-->
-
     <!-- ====== HERO SECTION ====== -->
-
     <main>
-        
         <section class="grid-container">
-
                 <div class="hero-container">
-                
                     <div class="hero-text">    
-
-                        <h1 class="hero-title">Find Your Next 
+                       <h1 class="hero-title">Find Your Next 
                             <span class="hero-adventure">Adventure</span>
                         </h1>
-
                         <p class="hero-description">
                             Your next hiking adventure awaits.
                             Get on the trail with detailed maps and updates
                             shared by hikers like you.
                         </p>
-
                     </div><!--close hero text-->
-
                     <div class="search-form">    
-
                         <form action="#">
-
                             <div class="search-form-container">
-            
                                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
                                 <input 
                                     type="search" 
@@ -153,109 +113,74 @@
                                     id="city-search-btn">
                                     Search
                                 </button>    
-            
                             </div><!--close search form container-->
-                        
                         </form>
                     </div><!--close search form div-->
-
                 </div><!--close hero-container-->
-        
     <!-- ====== HIKES / GRID ====== -->
-        
                 <h2 class="hikes-heading padding">Hikes near Bergen</h2>
-
                 <img src="assets/hike-img-1.jpg" class="hike-img img-one padding" alt="forested mountains and clear lakes under blue sky and clouds">
-                
                 <article class="hike-one padding">
-                    
                     <h3 class="hikes-title">Fløyen</h3>
                     <h4 class="hikes-subtitle">Length: 10.2 km - Est. 5 h</h4>
                     <p class="hikes-description">
                         Fløibanen is one of Norway's most visited attractions. At the top of Fløyen you will find a large and varied hiking area, spectacular views of the city.
                     </p>
                     <a href="https://floyen.no/en/" class="learn-link">
-                        Learn More
+                        Learn More about Fløyen
                     </a>
-                
                 </article><!--close hike one-->
-
                 <img src="assets/hike-img-2.jpg" class="hike-img img-two padding" alt="mountains, forest, and lakes surrounding the city of Bergen, Norway">
-               
                 <article class="hike-two padding">
-                    
                     <h3 class="hikes-title">Ulriken</h3>
                     <h4 class="hikes-subtitle">Length: 3.5 km - Est. 2 h 30 m</h4>
                     <p class="hikes-description">
                         Ulriken is the highest of the Seven Mountains that surround the city of Bergen, Norway. It has a height of 643 meters (2,110 ft) above sea level.
                     </p>
                     <a href="https://en.visitbergen.com/things-to-do/hike-up-mount-ulriken-p1710093" class="learn-link">
-                        Learn More
+                        Learn More about Ulriken
                     </a>
-            
                 </article><!--close hike two-->
-
                 <img src="assets/hike-img-3.jpg" class="hike-img img-three padding" alt="green craggy rocks and mountains near a city and a lake">
-                
                 <article class="hike-three padding">
-                    
                     <h3 class="hikes-title">Landåsfjellet</h3>
                     <h4 class="hikes-subtitle">Length: 3.5 km - Est. 2 h 30 m</h4>
                     <p class="hikes-description">
                         Landåsfjellet is a lower plateau south of Ulriken/Haugavarden which offers numerous trails, and is almost a separate hiking region by its own.
                     </p>
                     <a href="https://www.alltrails.com/trail/norway/vestland/landasfjellet?u=i" class="learn-link">
-                        Learn More
+                        Learn More about Landåsfjellet
                     </a>
-                
                 </article><!--close hike 3-->
-
         </section><!--close grid container-->
-
     <!-- ====== SITE INFO / GRID ====== -->
-    
         <section class="site-info-container">
-
             <article class="info-item">
-                
                 <img src="assets/bell-solid.svg" class="info-icon" alt="">
                 <h3 class="info-title">Sign up for notifications</h3>
                 <p class="info-description">
                     <button class="info-link" data-modal="modal">Sign up</button> to get conditions, alerts, information on pop-up events and interesting stories.
                 </p>
-            
             </article>
-
             <article class="info-item">
-
                 <img src="assets/location-solid.svg" class="info-icon" alt="">
                 <h3 class="info-title">Get the HikeFinder App</h3>
                 <p class="info-description">
                     <a href="#" class="info-link">Download the app</a> to get the most out of every minute outdoors with offline maps and more!
                 </p>
-
             </article>
-
             <article class="info-item">
-
                 <img src="assets/share-solid.png" class="info-icon" alt="">
                 <h3 class="info-title">Share Trails</h3>
                 <p class="info-description">
                     <button class="info-link" data-modal="modal">Share your hiking adventures</button> with the community and keep a record of your travels.
                 </p>
-
             </article>
-
         </section>
-    
     </main>
-
     <!-- ====== FOOTER ====== -->
-    
     <footer>
-        
         <nav>
-            
             <ul class="footer-nav">
                 <li class="footer-crumb"><a href="index.html">home</a></li>
                 <li class="footer-crumb"><a href="explore.html">explore</a></li>
@@ -266,18 +191,14 @@
                     <button class="footer-login-btn" id="footer-login-btn" data-modal="modal">log in</button>
                 </li>
             </ul>
-
         </nav>
-
         <div class="footer-text">
             <img src="assets/logo-footer.png" alt="HikeFinder" class="footer-logo">
             <p class="copyright-info">copyright 2022 HikeFinder</p>
         </div>    
-
     </footer>
-
+    </div>
     <script src="index.js"></script>
-
 </body>
 </html>
 
